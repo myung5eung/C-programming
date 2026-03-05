@@ -33,8 +33,10 @@ return 0;
 ## 파일위치
 #### 소스파일
 <img width="935" height="353" alt="스크린샷 2026-03-05 211013" src="https://github.com/user-attachments/assets/6b98ec4f-5f73-4ddc-a4d5-ceb5a9d93e05" />
+
 #### 목적파일
 <img width="936" height="424" alt="스크린샷 2026-03-05 211026" src="https://github.com/user-attachments/assets/23051627-136e-45f5-80a1-3b3fa2c3ba20" />
+
 #### 실행파일
 <img width="952" height="268" alt="스크린샷 2026-03-05 211040" src="https://github.com/user-attachments/assets/c1593d4c-e26c-4dd1-ab25-d6b34d9b9dc8" />
 
