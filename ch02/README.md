@@ -11,7 +11,7 @@
 ●소스파일(cpp), 목적파일(obj), 실행파일(exe)의 위치를 찾아보라 -> 파일탐색기 검색화면을 캡쳐하여 첨부할 것<br>
 ●파일탐색기에서 보기옵션에서 확장자가 보이도록 설정하여 파일종류를 확인할 수 있도록 캡쳐할 것<br>
 # 실행결과
-
+<img width="685" height="218" alt="스크린샷 2026-03-05 211819" src="https://github.com/user-attachments/assets/348826d2-800a-463f-ab5c-97a36ec7525c" />
 # 파일위치
 <img width="952" height="268" alt="스크린샷 2026-03-05 211040" src="https://github.com/user-attachments/assets/c1593d4c-e26c-4dd1-ab25-d6b34d9b9dc8" />
 <img width="936" height="424" alt="스크린샷 2026-03-05 211026" src="https://github.com/user-attachments/assets/23051627-136e-45f5-80a1-3b3fa2c3ba20" />
