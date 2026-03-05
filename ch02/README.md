@@ -14,7 +14,7 @@
 ```
 #include <iostream>
 ```
-- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함하라
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
 ```
 int main()
 ```
@@ -22,7 +22,7 @@ int main()
 ```
 std::cout << "Hello";
 ```
-- 화면에 Hello를 출력, std::cout은 화면에 출력해주는 객체, << 삽입연산자 함수
+- 화면에 Hello를 출력
 ```
 return 0;
 ```
