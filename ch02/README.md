@@ -29,6 +29,7 @@ return 0;
 - 0을 반환하고 함수종료
 ## 실행결과
 <img width="685" height="218" alt="스크린샷 2026-03-05 211819" src="https://github.com/user-attachments/assets/348826d2-800a-463f-ab5c-97a36ec7525c" />
+
 ## 파일위치
 <img width="952" height="268" alt="스크린샷 2026-03-05 211040" src="https://github.com/user-attachments/assets/c1593d4c-e26c-4dd1-ab25-d6b34d9b9dc8" />
 <img width="936" height="424" alt="스크린샷 2026-03-05 211026" src="https://github.com/user-attachments/assets/23051627-136e-45f5-80a1-3b3fa2c3ba20" />
