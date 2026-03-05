@@ -22,7 +22,7 @@ int main()
 ```
 std::cout << "Hello";
 ```
-- 화면에 Hello를 출력
+- 화면에 Hello를 출력, std::cout는 화면에 출력, <<는 스트림 삽입 연산자
 ```
 return 0;
 ```
