@@ -90,7 +90,7 @@ int main(void)
 -i가 7보다 작을동안 증가하는 것을 반복
 ```
 	{
-		for (int j = 0; j < 7; j++)
+		for (int j = 0; j < 7; j++) {
 ```
 -i가 증가하는 반복 for문 안에서 j가 7보다 작을동안 증가하는 것을 반복
 ```
@@ -111,6 +111,7 @@ int main(void)
 ```
 - j가 증가하는 for문이 끝나면 줄을 바꿈
 ```
+	}
 	return 0;
 ```
 - 0을 반환하고 함수 종료
@@ -133,22 +134,37 @@ int main(void)
 ```
 - 메인함수 시작
 ```
-	for (int i = 0; i < 7; i++)
+	for (int i = 0; i < 4; i++)
 	{
-		for (int j = 0; j < 7; j++)
+```
+- i가 4보다 작을동안 반
+```
+	for (int j = 0; j <= i; j++)
 		{
-			if (i == j || i+j== 6 )
-			{
-				cout << "*";
-			}
-			else cout << "  ";
-
-		}
+```
+- j가 i보다 작거나 같을 동안 반복
+```
+  if (i+1>=j)
+```
+- 만약 i+1값이 j보다 크거나 같으면
+```
+ cout << "*";
+```
+- *출력
+```
+	else cout << "  ";
+```
+- 아닐시 공백 출력
+```
+}
 		cout << "\n";
 	}
 ```
--
+- j가 증가하는 반복문이 끝나면 줄바꿈 
 ```
+}
 	return 0;
 ```
 - 0을 반환하고 함수 종료
+## 실습과제5 실행결과
+<img width="812" height="323" alt="image" src="https://github.com/user-attachments/assets/f5912024-033f-437b-acb1-b6fe7225f678" />
