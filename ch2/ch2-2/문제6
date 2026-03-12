@@ -1,5 +1,8 @@
-#include <iostream>
+# Title : 실습과제6
+# Author : myungseungyeon
+# Data : 26.3.13
 
+#include <iostream>
 using namespace std;
 
 int main(void)
