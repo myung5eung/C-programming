@@ -39,3 +39,65 @@ int main(void)
 	return 0;
 ```
 - 0을 반환하고 함수 종료
+  
+# 실습과제 3
+
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+```
+using namespace std;
+```
+- std이름공간에선언된모든이름에std::생략 
+```
+int main(void)
+```
+- 메인함수 시작
+```
+	cout << "군산대학교 \"홍길동\"\n";
+	cout << "\"축하합니다.\"\n";
+	cout << "100% \\취업률\\";
+	return 0;
+```
+- 대학 합격안내 문구 출력
+```
+	return 0;
+```
+- 0을 반환하고 함수 종료
+
+# 실습과제 4
+
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+```
+using namespace std;
+```
+- std이름공간에선언된모든이름에std::생략 
+```
+int main(void)
+```
+- 메인함수 시작
+```
+	for (int i = 0; i < 7; i++)
+	{
+		for (int j = 0; j < 7; j++)
+		{
+			if (i == j || i+j== 6 )
+			{
+				cout << "*";
+			}
+			else cout << "  ";
+
+		}
+		cout << "\n";
+	}
+```
+- 
+```
+	return 0;
+```
+- 0을 반환하고 함수 종료
+  
