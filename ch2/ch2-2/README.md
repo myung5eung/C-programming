@@ -27,5 +27,14 @@ cin과 coust는 iostream 헤더파일안에 존재한다.
 # 실습과제 4
 
 ## 실행결과
+<img width="1345" height="192" alt="image" src="https://github.com/user-attachments/assets/1b305bb1-9d5a-4c81-998c-a9225dc0c252" />
+
 # 실습과제 5
+
+## 실행결과
+<img width="1333" height="192" alt="image" src="https://github.com/user-attachments/assets/23346e9c-cd4b-4509-8160-13c1a62f6769" />
+
 # 실습과제 6
+
+## 실행결과
+<img width="1487" height="397" alt="image" src="https://github.com/user-attachments/assets/5791e698-29a9-420e-9314-598f6202fcce" />
