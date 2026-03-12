@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main(void)
+{
+	double a[50];
+	cout << "실수 5개를 입력하세요>>";
+	for (int i = 0; i < 5; i++)
+		cin >> a[i];
+
+	double pn = 0.0;
+
+	for (int i = 0; i < 5; i++)
+	{
+		if (a[i] > 0) pn += a[i];
+	}
+	
+	cout << "양수 합은" << pn << "입니다.";
+	return 0;
+}
