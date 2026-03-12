@@ -1,0 +1,29 @@
+# Title : 실습과제2
+# Author : myungseungyeon
+# Data : 26.3.13
+
+#include <iostream>
+using namespace std;
+int main(void)
+{
+	int num;
+	char name[10];
+	char add[30];
+
+	cout << "학번을 입력하시오: ";
+	cin >> num;
+	cout << "이름을 입력하시오: ";
+	cin >> name;
+
+	cin.ignore();
+
+	cout << "주소를 입력하시오: ";
+	cin.getline(add, sizeof(add), '\n');
+	cout << endl;
+	cout << "1.학번:"<<num<<endl;
+	cout << "2.이름:" << name << endl;
+	cout << "3.주소:" << add << endl;
+
+
+	return 0;
+}
