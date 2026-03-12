@@ -61,7 +61,6 @@ int main(void)
 	cout << "군산대학교 \"홍길동\"\n";
 	cout << "\"축하합니다.\"\n";
 	cout << "100% \\취업률\\";
-	return 0;
 ```
 - 대학 합격안내 문구 출력
 ```
@@ -72,6 +71,54 @@ int main(void)
 <img width="740" height="242" alt="image" src="https://github.com/user-attachments/assets/75d59867-afd3-400a-a8dd-31dad4b113e7" />
 
 # 실습과제 4
+
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+```
+using namespace std;
+```
+- std이름공간에선언된모든이름에std::생략 
+```
+int main(void)
+```
+- 메인함수 시작
+```
+	for (int i = 0; i < 7; i++)
+```
+-i가 7보다 작을동안 증가하는 것을 반복
+```
+	{
+		for (int j = 0; j < 7; j++)
+```
+-i가 증가하는 반복 for문 안에서 j가 7보다 작을동안 증가하는 것을 반복
+```
+	if (i == j || i+j== 6 )
+```
+-만약 i와 j가 같거나(행과 열이 같거나) 더한 값이 6이면
+```
+	cout << "*";
+```
+- *을 출력
+```
+  else cout << "  ";
+```
+- 아니라면 공백 출력
+```
+  }
+		cout << "\n";
+```
+- j가 증가하는 for문이 끝나면 줄을 바꿈
+```
+	return 0;
+```
+- 0을 반환하고 함수 종료
+
+## 실습과제4의 실행결과
+<img width="730" height="327" alt="image" src="https://github.com/user-attachments/assets/05171f7f-5c1a-4762-a635-8cc979d121f4" />
+
+# 실습과제 5
 
 ```
 #include <iostream>
@@ -105,9 +152,3 @@ int main(void)
 	return 0;
 ```
 - 0을 반환하고 함수 종료
-
-## 실습과제4의 실행결과
-<img width="730" height="327" alt="image" src="https://github.com/user-attachments/assets/05171f7f-5c1a-4762-a635-8cc979d121f4" />
-
-# 실습과제 5
-
