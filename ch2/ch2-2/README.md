@@ -15,7 +15,17 @@ cin과 coust는 iostream 헤더파일안에 존재한다.
 헤더파일 안에 존재하는 함수나 변수, 객체의 선언을 컴파일러에게 제공하지않으면 컴파일 오류가 발생하기 때문이다. 
 
 # 실습과제 2
+
+## 실행결과
+<img width="727" height="188" alt="image" src="https://github.com/user-attachments/assets/14ed7477-5ea9-420d-b14e-8c7e15662b6a" />
+
 # 실습과제 3
+
+## 실행결과
+<img width="741" height="347" alt="image" src="https://github.com/user-attachments/assets/3d148047-0251-4fdc-b31d-1fbdc36e315a" />
+
 # 실습과제 4
+
+## 실행결과
 # 실습과제 5
 # 실습과제 6
