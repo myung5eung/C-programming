@@ -19,21 +19,23 @@ ostream
 ```
 #include <iostream>
 ```
-
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
 ```
 using namespace std;
 ```
-
+- std이름공간에선언된모든이름에std::생략 
 ```
 int main(void)
 ```
-
+- 메인함수 시작
 ```
 	cout << "이름 : 홍길동\n";
 	cout << "주소 : 군산시 대학로 558\n";
 	cout << "학번 : 201012\n";
 	cout << "차종 : 벤츠";
 ```
+- 이름, 주소, 학번, 차종을 출력
 ```
 	return 0;
 ```
+- 0을 반환하고 함수 종료
