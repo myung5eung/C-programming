@@ -1,3 +1,7 @@
+# Title : 실습과제2
+# Author : myungseungyeon
+# Data : 26.3.12
+
 #include <iostream>
 using namespace std;
 int main(void)
