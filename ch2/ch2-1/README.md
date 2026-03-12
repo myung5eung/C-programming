@@ -2,7 +2,9 @@
 ## 전처리또는 선행처리 단계를 설명하라 
 편집 컴파일 링크 실행 디버깅
 ## 객체 cin, cout은 어디에 선언되어 있는가? 선언된 파일을 찾아서 의미를 설명하고 캡쳐하여 첨부하라 -> 교재 75페이지 2.5절 내용을 참고할 것
-iostream
+iostream안에 cin은 istream타입으로 cout는 ostream타입의 객체로 선언되어 있다.
+<img width="917" height="627" alt="image" src="https://github.com/user-attachments/assets/a577dcbd-c110-4360-a5b8-706c466aa057" />
+
 ## 프로그램을 링크할때 이름 충돌이 발생하는 경우를 설명해보라
 다른 사람이 작성한 목적파일을 링크하는 경우
 ## 스트림이란 무엇인가?
