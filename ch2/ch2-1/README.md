@@ -40,6 +40,8 @@ int main(void)
 	return 0;
 ```
 - 0을 반환하고 함수 종료
+## 실습과제2의 실행결과
+<img width="646" height="253" alt="image" src="https://github.com/user-attachments/assets/350d0c25-af67-4ed3-9621-fdda7d5b7b6b" />
   
 # 실습과제 3
 
@@ -66,6 +68,8 @@ int main(void)
 	return 0;
 ```
 - 0을 반환하고 함수 종료
+## 실습과제3의 실행결과
+<img width="740" height="242" alt="image" src="https://github.com/user-attachments/assets/75d59867-afd3-400a-a8dd-31dad4b113e7" />
 
 # 실습과제 4
 
@@ -96,9 +100,14 @@ int main(void)
 		cout << "\n";
 	}
 ```
-- 
+-
 ```
 	return 0;
 ```
 - 0을 반환하고 함수 종료
-  
+
+## 실습과제4의 실행결과
+<img width="730" height="327" alt="image" src="https://github.com/user-attachments/assets/05171f7f-5c1a-4762-a635-8cc979d121f4" />
+
+# 실습과제 5
+
