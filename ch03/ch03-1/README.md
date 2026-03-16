@@ -82,7 +82,64 @@ class Sphere {
 ```
 - 클래스 Sphere 선언
 ```
+public:
+```
+- 접근 지정자를 public으로
+```
+int rad;
+```
+- 반지름을 저장할 멤버 변수
+```
+double getVolume();
+double getArea();
+```
+- 구의 부피와 표면적을 구할 멤버 함수 선언
+```
+}; 
+```
+-클래스 선언부 닫음
+```
+double Sphere::getVolume() {
+```
+-Sphere 클래스의 멤버 함수 getVolume()의 구현부
+```
+return  (4.0 / 3.0) * 3.14 * rad * rad * rad; }
+```
+-구의 부피구하는 공식을 계산하여 반환
+```
+double Sphere::getArea() {
+```
+-Sphere 클래스의 멤버 함수 getArea()의 구현부
+```
+return 4 * 3.14 * rad * rad; }
+```
+-구의 부피 공식을 이용하여 계산한 값을 반환
+```
+int main(void) {
+```
+-메인함수 시작
+```
+Sphere c;
+```
+-객체 c생성
+```
+c.rad = 3;
+```
+-객체 c의 멤버 변수에 값을 저장
+```
+cout << "구의 부피는 " << c.getVolume() << "\n";
+```
+- 구의 부피 출력
+```
+cout << "구의 표면적은 " << c.getArea() << "\n";
+```
+- 구의 표면적 출력
+return 0; }
+```
+-0 반환 후 함수종료
+
 ## 실행결과
+<img width="683" height="216" alt="image" src="https://github.com/user-attachments/assets/44da1a34-ea7d-493e-a2dd-6d601bd9c3cf" />
 
 # 실습과제 4
 
