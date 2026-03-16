@@ -1,3 +1,7 @@
+# Title : 실습과제4번에서 키보드로 입력받는 기능추가
+# Author : myungseungyeon
+# Data : 26.3.16
+
 #include <iostream>
 using namespace std;
 class Rectangle{
