@@ -150,7 +150,87 @@ return 0; }
 ```
 using namespace std;
 ```
-- std이름공간에선언된모든이름에std::생략 
+- std이름공간에선언된모든이름에std::생략
+```
+class Rectangle {
+```
+- Rectangle 클래스 선언
+```
+public:
+```
+- 접근 지정자를 public으로
+```
+int width = 3;
+int height = 4;
+```
+- 사각형의 폭과 높이를 저장할 멤버 변수 선언 및 초기값 설정
+```
+int x = 1, y = 2;
+```
+- 사각형 좌측상단 좌표를 저장할 멤버 변수 선언 및 초기값 설정
+```
+int getArea();
+int getCircum();
+void getCoo();
+```
+- 사각형의 면적, 둘레, 우측하단 좌표를 구할 멤버 함수 선언
+```
+};
+```
+- 클래스 선언부 닫음
+```
+int Rectangle::getArea() {
+```
+- Rectangle 클래스 멤버 함수 getArea() 구현부
+```
+return width * height; }
+```
+- 폭과 높이를 곱해 사각형의 면적을 계산하여 반환 후 종료
+```
+int Rectangle::getCircum() {
+```
+- Rectangle 클래스 멤버 함수 getCircum() 구현부
+```
+return (width + height) * 2; }
+```
+- 둘레를 구하는 공식을 이용해 계산하여 반환 후 종료
+```
+void Rectangle::getCoo() {
+```
+- Rectangle 클래스 멤버 함수 getCoo() 구현부
+```
+cout << "(" << x + width << "," << y - height << ")"; }
+```
+- 우측하단 좌표 계산해 출력
+int main(void) {
+```
+- 메인함수 시작
+```
+Rectangle rect;
+```
+- 객체 rect생성
+```
+cout << "사각형의 면적은 " << rect.getArea() << "\n";
+```
+- 사각형 면적 출력
+```
+cout << "사각형의 둘레길이는 " << rect.getCircum() << "\n";
+```
+- 사각형 둘레길이 출력
+```
+cout << "사각형의 우측하단 좌표는 ";
+```
+- 사각형 우측하단 좌표 문구 출력
+```
+rect.getCoo();
+```
+- getCoo() 함수를 호출하여 우측하단 좌표 출력
+```
+return 0; }
+```
+- 0 반환 후 함수종료
+
+
 ## 실행결과
 <img width="707" height="222" alt="image" src="https://github.com/user-attachments/assets/055d3d6c-b5e6-42ff-a1a7-752af0e4fb07" />
 
