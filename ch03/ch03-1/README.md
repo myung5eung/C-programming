@@ -16,7 +16,57 @@ using namespace std;
 ```
 - std이름공간에선언된모든이름에std::생략 
 ```
+class Triangle {
+```
+- 클래스 Triangle 선언
+```
+public:
+```
+- 접근 지정자를 public으로
+```
+int wid;
+int hei;
+```
+-삼각형의 밑변과 높이를 저장할 멤버 변수
+```
+double getArea();
+```
+- 삼각형 면적을 구할 멤버 함수 선언
+```
+}; 
+```
+-클래스 선언부 닫음
+```
+double Triangle::getArea() {
+```
+-Triangle 클래스의 멤버 함수 getArea()의 구현부
+```
+return (wid * hei) * 0.5; }
+```
+-밑변 × 높이 ÷ 2 로 삼각형의 면적을 계산하여 반환
+```
+int main(void) {
+```
+-메인함수 시작
+```
+Triangle t;
+```
+-객체 t생성
+```
+t.wid = 3;
+t.hei = 5;
+```
+-객체 t의 멤버 변수에 값을 저장
+```
+cout << "삼각형의 면적은" << t.getArea();
+```
+- 삼각형의 면적 출력 
+```
+return 0; }
+```
+-0 반환 후 함수종료
 ## 실행결과
+<img width="692" height="207" alt="image" src="https://github.com/user-attachments/assets/97e9067c-e375-436e-afc3-ebb5f127f2bb" />
 
 # 실습과제 3
 
