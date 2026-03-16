@@ -143,8 +143,16 @@ return 0; }
 <img width="683" height="216" alt="image" src="https://github.com/user-attachments/assets/44da1a34-ea7d-493e-a2dd-6d601bd9c3cf" />
 
 # 실습과제 4
-
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+```
+using namespace std;
+```
+- std이름공간에선언된모든이름에std::생략 
 ## 실행결과
+<img width="707" height="222" alt="image" src="https://github.com/user-attachments/assets/055d3d6c-b5e6-42ff-a1a7-752af0e4fb07" />
 
 # 실습과제 5
 
