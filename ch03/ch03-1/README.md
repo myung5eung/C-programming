@@ -202,6 +202,7 @@ void Rectangle::getCoo() {
 cout << "(" << x + width << "," << y - height << ")"; }
 ```
 - 우측하단 좌표 계산해 출력
+```
 int main(void) {
 ```
 - 메인함수 시작
@@ -235,5 +236,17 @@ return 0; }
 <img width="707" height="222" alt="image" src="https://github.com/user-attachments/assets/055d3d6c-b5e6-42ff-a1a7-752af0e4fb07" />
 
 # 실습과제 5
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+```
+using namespace std;
+```
+- std이름공간에선언된모든이름에std::생략
+```
+class Rectangle {
+```
+- Rectangle 클래스 선언
 
 ## 실행결과
