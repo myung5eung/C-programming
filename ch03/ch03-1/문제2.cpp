@@ -1,4 +1,4 @@
-# Title : 문제2
+# Title : 삼각형의 면적 구하기
 # Author : myungseungyeon
 # Data : 26.3.16
 
