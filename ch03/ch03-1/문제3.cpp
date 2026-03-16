@@ -1,3 +1,7 @@
+# Title : 문제3
+# Author : myungseungyeon
+# Data : 26.3.16
+
 #include <iostream>
 using namespace std;
 class Sphere {
