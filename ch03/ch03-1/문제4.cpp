@@ -1,4 +1,4 @@
-# Title : 문제4
+# Title : 예제 3-2번에서 좌표를 추가
 # Author : myungseungyeon
 # Data : 26.3.16
 
