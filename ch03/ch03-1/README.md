@@ -69,7 +69,19 @@ return 0; }
 <img width="692" height="207" alt="image" src="https://github.com/user-attachments/assets/97e9067c-e375-436e-afc3-ebb5f127f2bb" />
 
 # 실습과제 3
-
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+```
+using namespace std;
+```
+- std이름공간에선언된모든이름에std::생략 
+```
+class Sphere {
+```
+- 클래스 Sphere 선언
+```
 ## 실행결과
 
 # 실습과제 4
