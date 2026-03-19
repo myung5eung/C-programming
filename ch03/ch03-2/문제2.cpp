@@ -22,4 +22,5 @@ int main(void)
     cout << "삼각형의면적은" << tri1.getArea() << endl;
     Triangle tri2(2, 4); // 밑변=2,높이=4로초기화
     cout << "삼각형의면적은" << tri2.getArea() << endl;
+    return 0;
 }
