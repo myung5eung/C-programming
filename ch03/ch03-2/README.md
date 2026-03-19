@@ -188,5 +188,131 @@ return 0; }
 ## 실행결과
 
 # 실습과제 4
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
 
+```
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```
+class Rectangle{
+```
+- 클래스 Rectangle 선언
+
+```
+int width, height;
+int x, y;
+```
+- 사각형의 너비, 높이와 좌표(x, y)를 저장할 멤버 변수
+
+```
+public:
+```
+- 접근 지정자를 public으로
+
+```
+Rectangle();
+```
+- 매개변수가 없는 생성자 선언
+
+```
+Rectangle(int w, int h);
+```
+- 좌표를 받을 생성자 선언
+```
+Rectangle(int x, int y, int width, int height);
+```
+- 좌표와 크기를 모두 받는 생성자 선언
+
+```
+int getArea() { return width * height; }
+```
+- 사각형의 면적을 구하는 멤버 함수
+
+```
+int getCircum(){ return (width + height) * 2; }
+```
+- 사각형의 둘레를 구하는 멤버 함수
+
+```
+void getCoo(){ cout << "(" << x + width << "," << y - height << ")"; }
+```
+- 사각형의 우측 하단 좌표를 출력하는 멤버 함수
+
+```
+};
+```
+- 클래스 선언부 닫음
+
+```
+Rectangle::Rectangle() : Rectangle(1, 1, 1, 1) {}
+```
+- 기본 생성자 정의, 위임 생성자를 사용하여 모든 멤버를 1로 초기화
+
+```
+Rectangle::Rectangle(int x, int y):Rectangle(x, y, 1, 1) {}
+```
+- 두 개의 값을 받는 생성자 정의, width와 height를 1로 초기화
+
+```
+Rectangle::Rectangle(int x, int y, int width, int height):x(x), y(y), width(width), height(height) {
+}
+```
+- 멤버 초기화 리스트를 사용하여 x, y, width, height 초기화
+
+```
+int main() {
+```
+- 메인함수 시작
+
+```
+Rectangle rect1;
+```
+- 객체 rect1 생성 (모든 멤버변수를 1로 초기화)
+
+```
+Rectangle rect2(3, 5);
+```
+- 객체 rect2 생성 (x=3, y=5, width=height=1)
+
+```
+Rectangle rect3(3, 5, 2, 4);
+```
+- 객체 rect3 생성 (x=3, y=5, width=2, height=4)
+
+```
+cout << "rect1의 면적은: " << rect1.getArea() << "\n";
+```
+- rect1의 면적 출력
+
+```
+cout << "rect2의 둘레길이는: " << rect2.getCircum() << "\n";
+```
+- rect2의 둘레 출력
+
+```
+cout << "rect3의 우측하단 좌표는: ";
+```
+- rect3 좌표 출력 안내
+
+```
+rect3.getCoo();
+```
+- rect3의 우측 하단 좌표 출력
+
+```
+return 0;
+```
+- 0 반환 후 프로그램 종료
+
+```
+}
+```
+- 함수 종료
 ## 실행결과
+<img width="1446" height="631" alt="image" src="https://github.com/user-attachments/assets/b5f0ec82-201a-41fa-96fb-002bf17a6107" />
+<img width="1446" height="631" alt="image" src="https://github.com/user-attachments/assets/b5f0ec82-201a-41fa-96fb-002bf17a6107" />
