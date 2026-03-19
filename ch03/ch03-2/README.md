@@ -96,6 +96,7 @@ return 0; }
 - 0을 반환하고 함수 종료
 
 ## 실행결과
+<img width="1682" height="678" alt="image" src="https://github.com/user-attachments/assets/5f900ac7-0dcd-463d-ad53-f06e524d52b3" />
 
 
 # 실습과제 3
@@ -137,7 +138,7 @@ Sphere(int a);
 ```
 double getVolume() { return (4.0 / 3.0) * 3.14 * rad * rad * rad; };
 ```
-- 구의 부피를 구하는 멤버 함수 정의 (공식: 4/3 × π × r³)
+- 구의 부피를 구하는 멤버 함수 정의 
 
 ```
 };
