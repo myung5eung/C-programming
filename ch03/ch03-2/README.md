@@ -23,7 +23,77 @@ using namespace std;
 ```
 class Triangle {
 ```
-- 삼각형 클래스 선언
+- 클래스 Triangle 선언
+
+```
+int w, h;
+```
+- 삼각형의 밑변과 높이를 저장할 멤버 변수
+
+```
+public:
+```
+- 접근 지정자를 public으로
+
+```
+Triangle();
+```
+- 매개변수가 없는 생성자 선언
+
+```
+Triangle(int a, int b);
+```
+- 밑변과 높이를 전달받는 생성자 선언
+
+```
+double getArea() { return (1.0 / 2.0) * w * h; }
+```
+- 삼각형 면적을 구하는 멤버 함수 정의
+
+```
+};
+```
+- 클래스 선언부 닫음
+
+```
+Triangle::Triangle() :Triangle(1, 1) {}
+```
+- 기본 생성자 정의, 위임 생성자를 사용하여 (1,1)로 초기화
+
+```
+Triangle::Triangle(int a, int b) : w(a), h(b) {}
+```
+- 멤버 초기화 리스트를 사용하여 w, h 초기화
+
+```
+int main(void) {
+```
+- 메인함수 시작
+
+```
+Triangle tri1;
+```
+- 객체 tri1 생성 (기본 생성자 호출)
+
+```
+cout << "삼각형의면적은" << tri1.getArea() << endl;
+```
+- tri1의 삼각형 면적 출력
+
+```
+Triangle tri2(2, 4);
+```
+- 객체 tri2 생성 (매개변수 생성자 호출)
+
+```
+cout << "삼각형의면적은" << tri2.getArea() << endl;
+```
+- tri2의 삼각형 면적 출력
+
+```
+return 0; }
+```
+- 0을 반환하고 함수 종료
 
 ## 실행결과
 
