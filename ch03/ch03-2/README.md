@@ -315,4 +315,3 @@ return 0;
 - 함수 종료
 ## 실행결과
 <img width="1446" height="631" alt="image" src="https://github.com/user-attachments/assets/b5f0ec82-201a-41fa-96fb-002bf17a6107" />
-<img width="1446" height="631" alt="image" src="https://github.com/user-attachments/assets/b5f0ec82-201a-41fa-96fb-002bf17a6107" />
