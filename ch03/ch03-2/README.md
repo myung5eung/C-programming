@@ -12,6 +12,18 @@
 생성중인 객체가 초기화되지 않고 임시 객체가 생성되는 의도와 다른 결과가 나온다. 
 
 # 실습과제 2
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+```
+using namespace std;
+```
+- std이름공간에선언된모든이름에std::생략
+```
+class Triangle {
+```
+- 삼각형 클래스 선언
 
 ## 실행결과
 
