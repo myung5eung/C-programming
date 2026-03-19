@@ -187,7 +187,8 @@ return 0; }
 
 
 ## 실행결과
-<img width="1672" height="666" alt="image" src="https://github.com/user-attachments/assets/d2c93b08-b9dc-4eff-bc5f-a9e33046670e" />
+<img width="1663" height="671" alt="image" src="https://github.com/user-attachments/assets/c568b51e-83f2-4f75-88af-09f99516c73f" />
+
 
 # 실습과제 4
 ```
