@@ -97,7 +97,93 @@ return 0; }
 
 ## 실행결과
 
+
 # 실습과제 3
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+
+```
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```
+class Sphere {
+```
+- 클래스 Sphere 선언
+
+```
+int rad;
+```
+- 구의 반지름을 저장할 멤버 변수
+
+```
+public:
+```
+- 접근 지정자를 public으로
+
+```
+Sphere();
+```
+- 매개변수가 없는 생성자 선언
+
+```
+Sphere(int a);
+```
+- 반지름을 전달받는 생성자 선언
+
+```
+double getVolume() { return (4.0 / 3.0) * 3.14 * rad * rad * rad; };
+```
+- 구의 부피를 구하는 멤버 함수 정의 (공식: 4/3 × π × r³)
+
+```
+};
+```
+- 클래스 선언부 닫음
+
+```
+Sphere::Sphere() :Sphere(1) {}
+```
+- 기본 생성자 정의, 위임 생성자를 사용하여 반지름을 1로 초기화
+
+```
+Sphere::Sphere(int a) : rad(a) {}
+```
+- 멤버 초기화 리스트를 사용하여 rad 초기화
+
+```
+int main() {
+```
+- 메인함수 시작
+
+```
+Sphere sph1;
+```
+- 객체 sph1 생성 (기본 생성자 호출, 반지름=1)
+
+```
+cout << "구의부피는" << sph1.getVolume() << endl;
+```
+- sph1의 구의 부피 출력
+
+```
+Sphere sph2(3);
+```
+- 객체 sph2 생성 (매개변수 생성자 호출, 반지름=3)
+
+```
+cout << "구의부피는" << sph2.getVolume() << endl;
+```
+- sph2의 구의 부피 출력
+
+```
+return 0; }
+```
+- 0 반환 후 함수종료
+
 
 ## 실행결과
 
