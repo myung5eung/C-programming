@@ -12,7 +12,6 @@ class Rectangle{
 public:
 Rectangle();
 Rectangle(int w, int h);
-Rectangle(int length);
 Rectangle(int x, int y, int width, int height);
 int getArea() { return width * height; }
 int getCircum(){ return (width + height) * 2; }
