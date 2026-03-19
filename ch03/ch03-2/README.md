@@ -33,7 +33,7 @@ int w, h;
 ```
 public:
 ```
-- 접근 지정자를 public으로
+- 접근 지정자를 public
 
 ```
 Triangle();
@@ -58,7 +58,7 @@ double getArea() { return (1.0 / 2.0) * w * h; }
 ```
 Triangle::Triangle() :Triangle(1, 1) {}
 ```
-- 기본 생성자 정의, 위임 생성자를 사용하여 (1,1)로 초기화
+- 생성자 정의, 위임 생성자를 사용하여 (1,1)로 초기화
 
 ```
 Triangle::Triangle(int a, int b) : w(a), h(b) {}
@@ -73,7 +73,7 @@ int main(void) {
 ```
 Triangle tri1;
 ```
-- 객체 tri1 생성 (기본 생성자 호출)
+- 객체 tri1 생성 
 
 ```
 cout << "삼각형의면적은" << tri1.getArea() << endl;
@@ -83,7 +83,7 @@ cout << "삼각형의면적은" << tri1.getArea() << endl;
 ```
 Triangle tri2(2, 4);
 ```
-- 객체 tri2 생성 (매개변수 생성자 호출)
+- 객체 tri2 생성
 
 ```
 cout << "삼각형의면적은" << tri2.getArea() << endl;
@@ -123,7 +123,7 @@ int rad;
 ```
 public:
 ```
-- 접근 지정자를 public으로
+- 접근 지정자 public
 
 ```
 Sphere();
@@ -148,7 +148,7 @@ double getVolume() { return (4.0 / 3.0) * 3.14 * rad * rad * rad; };
 ```
 Sphere::Sphere() :Sphere(1) {}
 ```
-- 기본 생성자 정의, 위임 생성자를 사용하여 반지름을 1로 초기화
+- 생성자 정의, 위임 생성자를 사용하여 반지름을 1로 초기화
 
 ```
 Sphere::Sphere(int a) : rad(a) {}
@@ -163,7 +163,7 @@ int main() {
 ```
 Sphere sph1;
 ```
-- 객체 sph1 생성 (기본 생성자 호출, 반지름=1)
+- 객체 sph1 생성
 
 ```
 cout << "구의부피는" << sph1.getVolume() << endl;
@@ -173,7 +173,7 @@ cout << "구의부피는" << sph1.getVolume() << endl;
 ```
 Sphere sph2(3);
 ```
-- 객체 sph2 생성 (매개변수 생성자 호출, 반지름=3)
+- 객체 sph2 생성 
 
 ```
 cout << "구의부피는" << sph2.getVolume() << endl;
@@ -213,7 +213,7 @@ int x, y;
 ```
 public:
 ```
-- 접근 지정자를 public으로
+- 접근 지정자 public
 
 ```
 Rectangle();
@@ -232,7 +232,7 @@ Rectangle(int x, int y, int width, int height);
 ```
 int getArea() { return width * height; }
 ```
-- 사각형의 면적을 구하는 멤버 함수
+- 사각형의 넓이을 구하는 멤버 함수
 
 ```
 int getCircum(){ return (width + height) * 2; }
@@ -273,17 +273,17 @@ int main() {
 ```
 Rectangle rect1;
 ```
-- 객체 rect1 생성 (모든 멤버변수를 1로 초기화)
+- 객체 rect1 생성
 
 ```
 Rectangle rect2(3, 5);
 ```
-- 객체 rect2 생성 (x=3, y=5, width=height=1)
+- 객체 rect2 생성 
 
 ```
 Rectangle rect3(3, 5, 2, 4);
 ```
-- 객체 rect3 생성 (x=3, y=5, width=2, height=4)
+- 객체 rect3 생성 
 
 ```
 cout << "rect1의 면적은: " << rect1.getArea() << "\n";
