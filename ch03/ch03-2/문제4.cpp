@@ -27,9 +27,9 @@ int main() {
 	Rectangle rect1;					 // 모든멤버변수를1로초기화
 	Rectangle rect2(3, 5);				// x=3,y=5,width=height=1로초기화
 	Rectangle rect3(3, 5, 2, 4);		// x=3,y=5,width=2, height=4로초기화
-	cout << "rect1 둘레: " << rect1.getArea() << "\n";
-	cout << "rect2 둘레: " << rect2.getCircum() << "\n";
-	cout << "rect3 좌표: ";
+	cout << "rect1의 면적은: " << rect1.getArea() << "\n";
+	cout << "rect2의 둘레길이는: " << rect2.getCircum() << "\n";
+	cout << "rect3의 우측하단 좌표는: ";
 	rect3.getCoo();
 	return 0;
 }
