@@ -13,7 +13,7 @@ public:
 
 	int getVolume();
 	int getPerimeter();
-	Point getBottomRight();
+	Point getPoint();
 };
 
 #endif
