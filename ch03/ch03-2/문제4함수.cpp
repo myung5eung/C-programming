@@ -8,7 +8,7 @@ int Rectangle::getVolume() { return width * height; }
 
 int Rectangle::getPerimeter() { return 2 * (width + height); }
 
-Point Rectangle::getBottomRight() {
+Point Rectangle::getPoint() {
 	Point p;
 	p.x = x + width;
 	p.y = y - height;
