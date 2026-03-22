@@ -17,8 +17,6 @@ int main() {
 	cout << "rect2의 둘레길이는 " << rect2.getPerimeter() << "\n";
 
 	Point br = rect3.getPoint();
-	cout << "rect3의 우측하단의 좌표는 ("
-		<< br.x << ", " << br.y << ")" << "\n";
-
+	cout << "rect3의 우측하단의 좌표는 (" << br.x << ", " << br.y << ")" << "\n";
 	return 0;
 }
