@@ -1,23 +1,19 @@
 #ifndef _RECTANGLE_H_
 #define _RECTANGLE_H_
 
-struct Point {
-    int x;
-    int y;
-};
+struct Point { int x, y; };
 
 class Rectangle {
-    int width, height;
-    int x, y;
 public:
-    Rectangle();
-    Rectangle(int x, int y);
-    Rectangle(int x, int y, int width, int height);
+	int x, y, width, height;
 
-    Point getCoo();
-    int getArea();
-    int getCircum();
-    
+	Rectangle();
+	Rectangle(int a, int b);
+	Rectangle(int a, int b, int c, int d);
+
+	int getVolume();
+	int getPerimeter();
+	Point getBottomRight();
 };
 
 #endif
