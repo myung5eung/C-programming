@@ -5,6 +5,7 @@
 // *******************************************
 
 #include <iostream>
+#include "rect.h"
 using namespace std;
 class Rectangle{
 	int width, height;
