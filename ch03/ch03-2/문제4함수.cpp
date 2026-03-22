@@ -1,17 +1,16 @@
-#include <iostream>
 #include "rect.h"
 
-
 Rectangle::Rectangle() : Rectangle(1, 1, 1, 1) {}
-Rectangle::Rectangle(int x, int y) : Rectangle(x, y, 1, 1) {}
-Rectangle::Rectangle(int x, int y, int width, int height)
-    : x(x), y(y), width(width), height(height) {}
-int Rectangle::getArea() { return width * height; }
-int Rectangle::getCircum() { return (width + height) * 2; }
-Point Rectangle::getCoo() 
-{
-    Point p;
-    p.x = x + width;
-    p.y = y - height;
-    return p;
+Rectangle::Rectangle(int a, int b) : x(a), y(b), width(1), height(1) {}
+Rectangle::Rectangle(int a, int b, int c, int d) : x(a), y(b), width(c), height(d) {}
+
+int Rectangle::getVolume() { return width * height; }
+
+int Rectangle::getPerimeter() { return 2 * (width + height); }
+
+Point Rectangle::getBottomRight() {
+	Point p;
+	p.x = x + width;
+	p.y = y - height;
+	return p;
 }
