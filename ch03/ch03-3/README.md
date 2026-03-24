@@ -15,6 +15,88 @@
 main 함수가 종료된 이후에는 정리 작업이 이루어진다. 전역변수와 정적변수가 소멸되고 전역객체의 소멸이 발생하며 사용하던 자원이 운영체제에 반환된다
 
 # 실습과제 2
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+```
+using namespace std;
+```
+- std이름공간에선언된모든이름에std::생략
+```
+class Triangle {
+```
+- 클래스 Triangle 선언
+```
+public:
+```
+- 접근 지정자를 public
+
+```
+int w, h;
+```
+- 삼각형의 밑변과 높이를 저장할 멤버 변수
+
+```
+Triangle();
+```
+- 매개변수가 없는 생성자 선언
+
+```
+Triangle(int a, int b);
+```
+- 밑변과 높이를 전달받는 생성자 선언
+
+```
+double getArea();
+```
+- 삼각형 면적을 구하는 멤버 함수 선언
+
+```
+};
+```
+- 클래스 선언부 닫음
+
+```
+Triangle::Triangle() :Triangle(1, 1) {}
+```
+- 생성자 정의, 위임 생성자를 사용하여 (1,1)로 초기화
+
+```
+Triangle::Triangle(int a, int b) : w(a), h(b) {}
+```
+- 멤버 초기화 리스트를 사용하여 w, h 초기화
+
+```
+int main(void) {
+```
+- 메인함수 시작
+
+```
+Triangle tri1;
+```
+- 객체 tri1 생성 
+
+```
+cout << "삼각형의면적은" << tri1.getArea() << endl;
+```
+- tri1의 삼각형 면적 출력
+
+```
+Triangle tri2(2, 4);
+```
+- 객체 tri2 생성
+
+```
+cout << "삼각형의면적은" << tri2.getArea() << endl;
+```
+- tri2의 삼각형 면적 출력
+
+```
+return 0; }
+```
+- 0을 반환하고 함수 종료
+
 ## 실행결과
 <img width="1000" height="351" alt="image" src="https://github.com/user-attachments/assets/7312ec15-c6fc-47e3-9035-a0a28b5b7085" />
 
