@@ -66,9 +66,19 @@ Triangle::Triangle() :Triangle(1, 1) {}
 - 생성자 정의, 위임 생성자를 사용하여 (1,1)로 초기화
 
 ```
-Triangle::Triangle(int a, int b) : w(a), h(b) { cout << "밑변" << width << "높이" << height << "인 삼각형 생성\n"; }
+Triangle::Triangle(int a, int b) : w(a), h(b)
+{
+cout << "밑변" << width << "높이" << height << "인 삼각형 생성\n";
+}
 ```
 - 멤버 초기화 리스트를 사용하여 높이, 밑변 초기화/ 생성시 출력되는 문장
+```
+Triangle::~Triangle()
+{
+	cout << "밑변" << width << "높이" << height << "인 삼각형 소멸\n";
+}
+```
+- 소멸자 구현/소멸시 출력되는 문장
 ```
 double Triangle::getArea()
 {
