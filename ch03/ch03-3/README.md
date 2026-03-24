@@ -66,7 +66,7 @@ Triangle::Triangle() :Triangle(1, 1) {}
 - 생성자 정의, 위임 생성자를 사용하여 (1,1)로 초기화
 
 ```
-Triangle::Triangle(int a, int b) : w(a), h(b)
+Triangle::Triangle(int w, int h) : width(w), height(h)
 {
 cout << "밑변" << width << "높이" << height << "인 삼각형 생성\n";
 }
