@@ -33,7 +33,7 @@ public:
 - 접근 지정자를 public
 
 ```
-int w, h;
+int int width, height;
 ```
 - 삼각형의 밑변과 높이를 저장할 멤버 변수
 
@@ -43,10 +43,13 @@ Triangle();
 - 매개변수가 없는 생성자 선언
 
 ```
-Triangle(int a, int b);
+Triangle(int w, int h);
 ```
 - 밑변과 높이를 전달받는 생성자 선언
-
+```
+~Triangle();
+```
+- 소멸자 선언
 ```
 double getArea();
 ```
@@ -63,10 +66,16 @@ Triangle::Triangle() :Triangle(1, 1) {}
 - 생성자 정의, 위임 생성자를 사용하여 (1,1)로 초기화
 
 ```
-Triangle::Triangle(int a, int b) : w(a), h(b) {}
+Triangle::Triangle(int a, int b) : w(a), h(b) { cout << "밑변" << width << "높이" << height << "인 삼각형 생성\n"; }
 ```
-- 멤버 초기화 리스트를 사용하여 w, h 초기화
-
+- 멤버 초기화 리스트를 사용하여 높이, 밑변 초기화/ 생성시 출력되는 문장
+```
+double Triangle::getArea()
+{
+	return (1.0 / 2.0) * width * height;
+}
+```
+- 면적을 구하는 함수 정의
 ```
 int main(void) {
 ```
