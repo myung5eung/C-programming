@@ -120,6 +120,103 @@ return 0; }
 <img width="1000" height="351" alt="image" src="https://github.com/user-attachments/assets/7312ec15-c6fc-47e3-9035-a0a28b5b7085" />
 
 # 실습과제 3
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+```
+using namespace std;
+```
+- std이름공간에선언된모든이름에std::생략
+```
+class Triangle {
+```
+- 클래스 Triangle 선언
+```
+public:
+```
+- 접근 지정자를 public
+
+```
+int int width, height;
+```
+- 삼각형의 밑변과 높이를 저장할 멤버 변수
+
+```
+Triangle();
+```
+- 매개변수가 없는 생성자 선언
+
+```
+Triangle(int w, int h);
+```
+- 밑변과 높이를 전달받는 생성자 선언
+```
+~Triangle();
+```
+- 소멸자 선언
+```
+double getArea();
+```
+- 삼각형 면적을 구하는 멤버 함수 선언
+
+```
+};
+```
+- 클래스 선언부 닫음
+
+```
+Triangle::Triangle() :Triangle(1, 1) {}
+```
+- 생성자 정의, 위임 생성자를 사용하여 (1,1)로 초기화
+
+```
+Triangle::Triangle(int a, int b) : w(a), h(b)
+{
+cout << "밑변" << width << "높이" << height << "인 삼각형 생성\n";
+}
+```
+- 멤버 초기화 리스트를 사용하여 높이, 밑변 초기화/ 생성시 출력되는 문장
+```
+Triangle::~Triangle()
+{
+	cout << "밑변" << width << "높이" << height << "인 삼각형 소멸\n";
+}
+```
+- 소멸자 구현/소멸시 출력되는 문장
+```
+double Triangle::getArea()
+{
+	return (1.0 / 2.0) * width * height;
+}
+```
+- 면적을 구하는 함수 정의
+```
+Triangle tri1(4,8);
+```
+- 전역객체 tri1 생성 
+```
+Triangle tri2(2, 2);
+```
+- 전역객체 tri2 생성
+```
+int main(void) {
+```
+- 메인함수 시작
+```
+cout << "삼각형의면적은" << tri2.getArea() << endl;
+```
+- tri2의 삼각형 면적 출력
+```
+cout << "삼각형의면적은" << tri1.getArea() << endl;
+```
+- tri1의 삼각형 면적 출력
+
+```
+return 0; }
+```
+- 0을 반환하고 함수 종료
+
 ## 실행결과
 <img width="1187" height="375" alt="image" src="https://github.com/user-attachments/assets/f669b71b-5031-4d4d-8745-8c57986d66c7" />
 
