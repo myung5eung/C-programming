@@ -225,6 +225,102 @@ return 0; }
 또한 실습과제 2에서는 tri1.getArea()가 먼저 호출되어 tri1의 면적이 먼저 출력되지만, 실습과제 3에서는 tri2.getArea()가 먼저 호출되도록 작성되어 있어 면적 출력 순서 역시 달라지게 된다.
 
 # 실습과제 4
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+
+```
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```
+class Sphere {
+```
+- 클래스 Sphere 선언
+
+```
+public:
+```
+- 접근 지정자 public
+```
+int rad;
+```
+- 구의 반지름을 저장할 멤버 변수
+```
+Sphere();
+```
+- 매개변수가 없는 생성자 선언
+
+```
+Sphere(int a);
+```
+- 반지름을 전달받는 생성자 선언
+
+```
+~Sphere();
+```
+- 소멸자 선언
+```
+double getVolume();
+```
+- 구의 부피를 구하는 멤버 함수 선언 
+
+```
+};
+```
+- 클래스 선언부 닫음
+
+```
+Sphere::Sphere() :Sphere(1) {}
+```
+- 생성자 정의, 위임 생성자를 사용하여 반지름을 1로 초기화
+
+```
+Sphere::Sphere(int a) : rad(a)
+{ cout << "반지름" << rad << "인 구 생성\n";}
+```
+- 멤버 초기화 리스트를 사용하여 rad 초기화하고 생성시 문구 출력
+```
+Sphere::~Sphere() 
+{ cout << "반지름" << rad << "인 구 소멸\n";}
+```
+- 소멸자 구현하고 소멸시 문구 출력
+```
+double Sphere::getVolume()
+{ return (4.0 / 3.0) * 3.141592 * rad * rad * rad;}
+```
+- 구의 부피를 계산하는 함수 정의
+```
+int main() {
+```
+- 메인함수 시작
+
+```
+Sphere sph1;
+```
+- 객체 sph1 생성
+
+```
+cout << "구의부피는" << sph1.getVolume() << endl;
+```
+- sph1의 구의 부피 출력
+
+```
+Sphere sph2(3);
+```
+- 객체 sph2 생성 
+
+```
+cout << "구의부피는" << sph2.getVolume() << endl;
+```
+- sph2의 구의 부피 출력
+
+```
+return 0; }
+```
+- 0 반환 후 함수종료
 ## 실행결과
 <img width="946" height="312" alt="image" src="https://github.com/user-attachments/assets/95983658-7a8f-4a4f-b15e-6eb798f3db73" />
 
