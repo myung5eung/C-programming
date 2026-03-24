@@ -7,8 +7,8 @@
 using namespace std;
 class Triangle
 {
-	int width, height;
 public:
+	int width, height;
 	Triangle();
 	Triangle(int w, int h);
 	~Triangle();
