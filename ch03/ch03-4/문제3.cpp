@@ -21,8 +21,8 @@ Triangle::Triangle(): width(1),height(1)
 { cout << "폭" << width << ",높이" << height << "삼각형생성\n"; }
 Triangle::~Triangle() 
 { cout << "폭" <<width<<",높이" <<height<< " 삼각형소멸"; }
-void Triangle::setWidth(int w) { width = w; }
-void Triangle::setHeight(int h) { height = h; }
+void Triangle::setWidth(int w) {  if (w > 0) width = w; }
+void Triangle::setHeight(int h) { if (h > 0) height = h; }
 int Triangle::getWidth(){ return width; }
 int Triangle::getHeight() { return height; }
 double Triangle::getArea() { return width*height*0.5; }
