@@ -124,7 +124,63 @@ return 0;
 <img width="753" height="215" alt="image" src="https://github.com/user-attachments/assets/411aa307-45b1-4ca6-9804-fc2b2264cd2d" />
 
 # 실습과제 4
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
 
+```
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```
+class Triangle {
+private:
+	int width, height;
+```
+- 클래스 Triangle 선언하고 접근 지정자가 private인 밑변과 높이 멤버변수 선언
+
+```
+public:
+	Triangle() :width(1), height(1) { cout << "폭" << width << ", 높이" << height << "삼각형 생성\n"; }
+	Triangle(int w, int h) :width(w), height(h) { cout << "폭" << width << ", 높이" << height << "삼각형 생성\n"; }
+	~Triangle() { cout << "폭" << width << ", 높이" << height << "삼각형 소멸\n"; }
+```
+- 접근 지정자가 public으로 기본 생성자, 매개변수 수에 따른 생성자, 소멸자 선언
+- 생성자, 소멸자 호출 시 문구 출력
+
+```
+double getArea() { return width * height * 0.5; }
+};
+```
+- 삼각형의 면적을 반환하는 함수 선언하면서 인라인으로 정의 후 클래스 선언부 닫음
+
+```
+int main()
+{
+	Triangle tri[3] = { Triangle(2,2), Triangle(4,4) ,Triangle(6,6) };
+```
+- 메인함수 시작
+- Triangle 객체 3개를 가지는 배열 선언과 동시에 각각 초기화
+
+```
+for (int i = 0; i < 3; i++)
+{
+```
+- 배열요소 순환용 반복문
+
+```
+cout << "삼각형" << i << "의 면적은 " << tri[i].getArea() << endl;
+```
+- 각 면적을 출력
+
+```
+}
+return 0;
+};
+```
+- 0을 반환하고 메인함수 종료
 ## 실행결과
 <img width="750" height="347" alt="image" src="https://github.com/user-attachments/assets/1e0af541-8478-49aa-b268-4ab3e3a17c7c" />
 
