@@ -226,7 +226,7 @@ int main()
 ```
 Triangle* ptr = tri;
 ```
-- 배열명(주소)를 가리키도록 객체 포인터 선언 및 초기화
+- 배열명(첫번째 요소의 주소)를 가리키도록 객체 포인터 선언 및 초기화
 
 ```
 for (int i = 0; i < 3; i++) 
@@ -259,6 +259,5 @@ return 0;
 ```
 - 0을 반환하고 메인함수 종료
 
-```
 ## 실행결과
 <img width="670" height="316" alt="image" src="https://github.com/user-attachments/assets/71c45131-1432-48aa-ac8d-a0ee18e2dc7c" />
