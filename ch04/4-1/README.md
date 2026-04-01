@@ -120,7 +120,6 @@ return 0;
 }
 ```
 - 0을 반환하고 함수종료
-```
 ## 실행결과
 <img width="753" height="215" alt="image" src="https://github.com/user-attachments/assets/411aa307-45b1-4ca6-9804-fc2b2264cd2d" />
 
