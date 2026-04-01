@@ -10,6 +10,53 @@
 ### 포인터를 이용하여 배열 각 원소의 값을 구하는 방법을 설명하라
 
 # 실습과제 2
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
+```
+using namespace std;
+```
+- std이름공간에선언된모든이름에std::생략
+```
+class Triangle {
+private:
+	int width, height;
+```
+- 클래스 Triangle 선언하고 접근 지정자가 private인 밑변과 높이 멤버변수 선언
+```
+public:
+	Triangle() :width(1), height(1) { }
+	~Triangle() {}
+```
+- 접근 지정자가 public으로 생성자와 소멸자 선언
+```
+void setWidth(int width) { this->width = width; }
+void setHeight(int height) { this->height = height; }
+double getArea() { return width * height * 0.5; }
+};
+```
+- 밑변과 높이를 설정하는 함수, 면적을 반환하는 함수 선언하면서 인라인으로 정의 후 클래스 선언부 닫음
+- 매개변수가 멤버변수와 이름이 같으므로 this포인터 사용
+```
+int main()
+{
+	Triangle tri1;
+```
+- 메인함수 시작, 객체 tri1생성
+```
+Triangle* ptr = &tri1;
+	ptr->setWidth(3);
+	ptr->setHeight(5);
+	cout << "삼각형의 면적은 "<< ptr->getArea() << endl;
+```
+- 객체포인터를 선언후 초기화, 객체 포인터 표현으로 밑변과 높이 설정
+- 포인터 표현으로 면적 출력
+```
+return 0;
+}
+```
+- 0을 반환하고 함수종료
 
 ## 실행결과
 <img width="759" height="241" alt="image" src="https://github.com/user-attachments/assets/3b319377-fb96-4458-bdb5-07c6e1e19ad5" />
