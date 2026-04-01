@@ -185,6 +185,80 @@ return 0;
 <img width="750" height="347" alt="image" src="https://github.com/user-attachments/assets/1e0af541-8478-49aa-b268-4ab3e3a17c7c" />
 
 # 실습과제 5
+```
+#include <iostream>
+```
+- cin, cout, 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함
 
+```
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```
+class Triangle {
+private:
+	int width, height;
+```
+- 클래스 Triangle 선언하고 접근 지정자가 private인 밑변과 높이 멤버변수 선언
+
+```
+public:
+	Triangle(int w, int h) :width(w), height(h) { }
+	~Triangle() {}
+```
+- 접근 지정자가 public으로 매개변수 2개 생성자와 소멸자 선언
+
+```
+double getArea() { return width * height * 0.5; }
+};
+```
+- 삼각형의 면적을 반환하는 함수 선언하면서 인라인으로 정의 후 클래스 선언부 닫음
+
+```
+int main()
+{
+	Triangle tri[3] = { Triangle(2,2), Triangle(4,4) ,Triangle(6,6) };
+```
+- 메인함수 시작
+- Triangle 객체 3개를 가지는 배열 선언과 동시에 각각 초기화
+
+```
+Triangle* ptr = tri;
+```
+- 배열명(주소)를 가리키도록 객체 포인터 선언 및 초기화
+
+```
+for (int i = 0; i < 3; i++) 
+{
+	cout << "삼각형" << i << "의 면적은 " << (ptr+i)->getArea() << endl;
+}
+```
+- 포인터 연산을 이용하여 각 객체에 접근 후 면적 출력 후 반복문 종료
+```
+for (int i=0; i<3; i++)
+{
+	cout << "삼각형" << i << "의 면적은 " << (tri+i)->getArea() << endl;
+}
+```
+- 배열명을 사용하는 방식으로 각 객체에 접근 후 면적 출력 후 반복문 종료
+
+```
+for (int i = 0; i < 3; i++)
+{
+	cout << "삼각형" << i << "의 면적은 " << ptr->getArea() << endl;
+	ptr++;
+}
+```
+- 포인터가 가리키는 객체의 면적 출력 후 다음 요소로 이동하는 증감연산 사용
+
+```
+}
+return 0;
+}
+```
+- 0을 반환하고 메인함수 종료
+
+```
 ## 실행결과
 <img width="670" height="316" alt="image" src="https://github.com/user-attachments/assets/71c45131-1432-48aa-ac8d-a0ee18e2dc7c" />
