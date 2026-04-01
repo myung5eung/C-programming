@@ -12,20 +12,21 @@
 # 실습과제 2
 
 ## 실행결과
-<img width="759" height="241" alt="image" src="https://github.com/user-attachments/assets/3b319377-fb96-4458-bdb5-07c6e1e19ad5" />
+<img width="461" height="206" alt="image" src="https://github.com/user-attachments/assets/3224973d-462f-4b39-a8da-fa02d7bdde7c" />
 
-# 실습과제 3
 
-## 실행결과
-<img width="753" height="215" alt="image" src="https://github.com/user-attachments/assets/411aa307-45b1-4ca6-9804-fc2b2264cd2d" />
-
-# 실습과제 4
+# 실습과제 3-1 
 
 ## 실행결과
-<img width="750" height="347" alt="image" src="https://github.com/user-attachments/assets/1e0af541-8478-49aa-b268-4ab3e3a17c7c" />
 
-# 실습과제 5
+
+# 실습과제 3-2
 
 ## 실행결과
-<img width="670" height="316" alt="image" src="https://github.com/user-attachments/assets/71c45131-1432-48aa-ac8d-a0ee18e2dc7c" />
+
+
+# 실습과제 3-3
+
+## 실행결과
+
 
