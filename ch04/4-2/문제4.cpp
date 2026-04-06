@@ -11,6 +11,7 @@ int main(void)
 	cout << "입력할 실수의 개수를 입력하세요: ";
 	cin >> n;
 	double* p = new double[n];
+	if (!p) { cout << "no"; return -1; }
 	double max = p[0];
 	cout <<n<< "개의 실수를 입력 하시오.\n";
 	for (int i = 0; i < n; i++)
