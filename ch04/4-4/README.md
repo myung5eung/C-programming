@@ -16,6 +16,8 @@ string 객체는 동적 메모리 할당되어 문자 데이터를 저장하기 
 # 실습과제 4
 2,4,5,8,9,11 중에 4문제 
 ## 연습문제 2번
+<img width="845" height="236" alt="image" src="https://github.com/user-attachments/assets/35331614-6aaf-4427-af78-49264f69672c" />
+
 ## 연습문제 번
 ## 연습문제 번
 ## 연습문제 번
