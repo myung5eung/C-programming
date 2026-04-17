@@ -234,6 +234,62 @@ int main(void)
 <img width="845" height="236" alt="image" src="https://github.com/user-attachments/assets/35331614-6aaf-4427-af78-49264f69672c" />
 
 ## 연습문제 4번
+```
+#include <iostream>
+#include <string>
+```
+- 입출력을 위한 iostream과 문자열 처리를 위한 string 헤더파일 포함
+
+```
+using namespace std;
+```
+- std 이름공간 생략하고 cin, cout, string 등을 바로 사용
+
+```
+int main(void)
+{
+```
+- 메인함수 시작
+
+```
+	string a;
+	string b = "";
+```
+- 입력받을 문자열 a 선언  
+- 알파벳&공백만 저장할 문자열 b를 선언 및 초기화 
+
+```
+	cout << "텍스트 입력(한글 안 됨)";
+	getline(cin, a);
+```
+- 사용자에게 문자열 입력받고 공백 포함 입력을 위해 getline 사용  
+
+```
+	for (int i = 0; i < a.length(); i++)
+	{
+```
+- 문자열 길이만큼 반복하는 for문 실행  
+
+```
+		if (isalpha(a[i]) || a[i] == ' ') b += a[i];
+```
+- 각 문자가 알파벳이거나 공백이면 b에 추가  
+
+```
+	}
+```
+- 반복문 종료  
+
+```
+	cout << b;
+```
+- 조건에 맞는 문자들만 저장된 결과 문자열 출력  
+
+```
+	return 0;
+}
+```
+- 0을 반환하고 함수 종료
 <img width="846" height="232" alt="image" src="https://github.com/user-attachments/assets/a7dee6c3-4d83-4621-9f72-28a9a1067120" />
 
 ## 연습문제 5번
