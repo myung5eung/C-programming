@@ -438,4 +438,156 @@ int main(void)
 <img width="977" height="312" alt="image" src="https://github.com/user-attachments/assets/ad2de49c-ac49-46f8-9c81-e2ee9fcae07a" />
 
 ## 연습문제 9번
+```
+#include <iostream>
+#include <string>
+```
+- cin, cout 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream과 string을 포함
+
+```
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```
+class Book {
+	string title;
+	int price;
+```
+- 클래스 Book 선언
+- 제목과 가격을 저장할 멤버변수 title, price 선언
+
+```
+public:
+	Book() { title = ""; price = 0; }
+	void set(string title, int price) { this->title = title; this->price = price; }
+	string getTitle() { return title; }
+	int getPrice() { return price; }
+};
+```
+- 접근 지정자가 public
+- 기본생성자에서 제목은 빈 문자열, 가격은 0으로 초기화
+- 제목과 가격을 저장하는 set함수 선언하면서 인라인으로 정의
+- 제목을 반환하는 getTitle함수, 가격을 반환하는 getPrice함수 선언하면서 인라인으로 정의 후 클래스 선언부 닫음
+
+```
+class Library {
+	string name;
+	Book* p;
+	int size;
+	int next = 0;
+```
+- 클래스 Library 선언
+- 도서관 이름을 저장할 name, Book 객체배열을 가리키는 포인터 p, 배열 크기 size, 다음 저장 위치를 나타내는 next 멤버변수 선언
+
+```
+public:
+	Library(string name, int size);
+	~Library();
+	void add(string name, int price);
+	void show();
+	Book* mostExpensive();
+};
+```
+- 접근 지정자가 public
+- 생성자, 소멸자와 책 추가, 출력, 가장 비싼 책을 찾는 멤버함수 선언 후 클래스 선언부 닫음
+
+```
+Library::Library(string name, int size)
+{
+	this->name = name; this->size = size;
+	p = new Book[size];
+	if (!p) cout << "no";
+}
+```
+- 생성자 정의
+- 전달받은 name과 size를 멤버변수에 저장하고 Book 객체 배열을 동적으로 생성
+- 메모리 할당 실패 시 no 출력
+
+```
+Library::~Library() { delete []p; }
+```
+- 소멸자 구현
+- 동적으로 할당한 Book 배열 메모리 해제
+
+```
+void Library::add(string name, int price){
+	p[next].set(name, price);
+	next++;
+}
+```
+- 책 제목과 가격을 전달받아 현재 위치의 Book 객체에 저장
+- 다음 저장 위치를 1 증가
+
+```
+void Library::show(){
+	for (int i = 0; i < next; i++)
+	{
+		cout << "[" + p[i].getTitle() + "]" << "   ";
+	}
+	cout << "\n";
+}
+```
+- 현재 저장된 책들의 제목을 반복문으로 출력하는 함수
+- 책 제목은 대괄호로 묶어서 출력하고 마지막에 줄바꿈
+
+```
+Book* Library::mostExpensive(){
+	if (next==0) return nullptr;
+	Book* exp = &p[0]; 
+	for (int i = 1; i < size; i++)
+	{
+		if (exp->getPrice() < p[i].getPrice()) exp = &p[i];
+	}
+	return exp;
+}
+```
+- 가장 비싼 책을 찾는 함수
+- 저장된 책이 없으면 nullptr 반환
+- 첫 번째 책 주소를 exp에 저장한 뒤 반복문으로 더 비싼 책이 있으면 exp를 그 책 주소로 변경
+- 가장 비싼 책의 주소를 반환
+
+```
+int main(void)
+{
+```
+- 메인함수 시작
+
+```
+	Library* lib = new Library("한국도서관", 10);
+```
+- Library 객체를 동적으로 생성하고 그 주소를 lib 포인터에 저장
+
+```
+	lib->add("명품 c++", 30000);
+	lib->add("라즈베리파이", 34000);
+	lib->add("HTML5", 33000);
+```
+- 도서관에 책 제목과 가격 정보 추가
+
+```
+	lib->show();
+```
+- 저장된 책 제목들 출력
+
+```
+	Book* b = lib->mostExpensive();
+```
+- 가장 비싼 책의 주소를 반환받아 Book 포인터 b에 저장
+
+```
+	cout << "가장 비싼 책: " << b->getTitle() << "," << b->getPrice() << endl;
+```
+- 가장 비싼 책의 제목과 가격 출력
+
+```
+	delete lib;
+```
+- 동적으로 생성한 Library 객체 메모리 해제
+
+```
+	return 0;
+}
+```
+- 0을 반환하고 함수 종료
 <img width="667" height="275" alt="image" src="https://github.com/user-attachments/assets/8625555b-18a6-4d39-a449-cd5af81c0337" />
