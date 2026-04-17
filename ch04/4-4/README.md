@@ -4,6 +4,68 @@ string 객체는 동적 메모리 할당되어 문자 데이터를 저장하기 
 ### 문자열을 입력할 때 마지막에 입력하는 엔터키와 getline 함수의 마지막 인자에 전달하는 구분문자와 차이를 설명하라 
 엔터키는 입력 버퍼에 '\n' 형태로 남아 운영체제 수준에서 입력을 종료시키는 역할이고 getline함수의 구분문자는 입력 스트림에서 특정 문자를 만날 때까지 데이터를 읽는다. 해당 문자를 만나면 입력을 종료하며 버퍼에서 제거되며 문자열에 저장되지 않는다. 
 # 실습과제 2
+```
+#include <iostream>
+#include <string>
+```
+- 문자열 처리와 입출력을 위해 iostream, string 헤더파일 포함
+```
+using namespace std;
+```
+- std 이름공간 생략하고 cin, cout, string 등을 바로 사용
+```
+int  main(void)
+{
+```
+- 메인함수 시작
+```
+	string a;
+	string result = "";
+	int i = 1;
+```
+- 입력받을 문자열 a 선언
+- 결과를 누적할 문자열 result 초기화
+- 문자열 번호를 붙이기 위한 변수 i 선언 및 1로 초기화
+```
+	while (1)
+	{
+```
+- 무한 반복문 실행
+```
+		cout << "문자열입력: ";
+		getline(cin, a);
+```
+- 사용자에게 문자열 입력받고 공백 포함 입력을 위해 getline 사용
+```
+		if (a == "quit") break;
+```
+- 입력값이 "quit"이면 반복문 종료
+```
+		cout << "이어진 문자열: ";
+```
+- 이어진 문자열 출력 안내문 출력
+```
+		result += "<" + to_string(i) + ">" + a;
+```
+- result에 문자열 더해서 저장
+- to_string 사용해서 문자열로 바꿈
+```
+		cout << result << endl;
+```
+- 현재까지 이어진 전체 문자열 출력
+```
+		i++;
+```
+- 다음 입력을 위해 번호 1 증가
+```
+	}
+```
+- 반복문 종료
+```
+	return 0;
+}
+```
+- 0을 반환하고 프로그램 종료
 
 ## 실행결과 
 <img width="730" height="312" alt="image" src="https://github.com/user-attachments/assets/8896be60-046d-4b16-bd32-458ca33d4898" />
