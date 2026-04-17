@@ -133,6 +133,104 @@ int main(void)
 # 실습과제 4
 2,4,5,8,9,11 중에 4문제 
 ## 연습문제 2번
+```
+#include <iostream>
+#include <string>
+```
+- 입출력을 위한 iostream과 문자열 처리를 위한 string 헤더파일 포함
+
+```
+using namespace std;
+```
+- std 이름공간 생략하고 cin, cout 등을 바로 사용
+
+```
+int main(void)
+{
+```
+- 메인함수 시작
+
+```
+	int num;
+```
+- 구입할 물품 개수를 저장할 변수 num 선언
+
+```
+	cout << "구입할 물품의 개수>>";
+	cin >> num;
+```
+- 사용자로부터 물품 개수 입력받음
+
+```
+	int* price = new int[num];
+```
+- 입력받은 개수만큼 동적 배열 생성하여 가격 저장할 공간 할당
+
+```
+	if (!price) { cout << "no"; return -1; }
+```
+- 메모리 할당 실패 시 "no" 출력하고 프로그램 종료
+
+```
+	cout << "물품" << num << "개의 가격입력>>";
+```
+- 가격 입력 안내문 출력
+
+```
+	cin >> price[0]; 
+```
+- 첫 번째 가격 입력받음
+
+```
+	int max = price[0], min = price[0];
+```
+- 최대값과 최소값을 첫 번째 가격으로 초기화
+
+```
+	for (int i = 1; i < num; i++) {
+```
+- 두 번째 값부터 끝까지 반복하는 for문 실행
+
+```
+		cin >> price[i];
+```
+- 각 물품의 가격 입력받음
+
+```
+		if (max < price[i]) max = price[i];
+```
+- 현재 값이 max보다 크면 max 갱신
+
+```
+		if (min > price[i]) min = price[i];
+```
+- 현재 값이 min보다 작으면 min 갱신
+
+```
+	}
+```
+- 반복문 종료
+
+```
+	cout << "제일 싼 가격은 " << min<<"\n";
+```
+- 최솟값 출력
+
+```
+	cout << "제일 비싼 가격은 " << max;
+```
+- 최댓값 출력
+
+```
+	delete[]price;
+```
+- 동적으로 할당한 배열 메모리 해제
+
+```
+	return 0;
+}
+```
+- 0을 반환하고 함수 종료
 <img width="845" height="236" alt="image" src="https://github.com/user-attachments/assets/35331614-6aaf-4427-af78-49264f69672c" />
 
 ## 연습문제 4번
