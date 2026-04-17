@@ -71,7 +71,62 @@ int  main(void)
 <img width="730" height="312" alt="image" src="https://github.com/user-attachments/assets/8896be60-046d-4b16-bd32-458ca33d4898" />
 
 # 실습과제 3
+```
+#include <iostream>
+#include <string>
+```
+- 문자열 처리와 입출력을 위해 iostream, string 헤더파일 포함
 
+```
+using namespace std;
+```
+- std 이름공간 생략하고 cin, cout, string 등을 바로 사용
+
+```
+int main(void)
+{
+```
+- 메인함수 시작
+
+```
+	string a;
+	int c = 0;
+```
+- 입력받을 문자열 a 선언  
+- 문자 개수를 저장할 변수 c를 0으로 선언 및 초기화
+
+```
+	cout << "문자열 입력: ";
+	getline(cin, a);
+```
+- 사용자에게 문자열 입력받고 공백 포함 입력을 위해 getline 사용  
+
+```
+	for (int i = 0; i < a.length(); i++)
+	{
+```
+- 문자열 길이만큼 반복하는 for문 실행  
+
+```
+		if (a[i] == 'a') c++;
+```
+- 문자열의 각 문자 확인해서 'a'이면 c를 1 증가  
+
+```
+	}
+```
+- 반복문 종료  
+
+```
+	cout << "문자a는" << c << "개 있습니다.";
+```
+- 입력한 문자열 안에 있는 문자 'a'의 총 개수 출력  
+
+```
+	return 0;
+}
+```
+- 0을반환하고 함수종료
 ## 실행결과
 <img width="855" height="191" alt="image" src="https://github.com/user-attachments/assets/367421cb-a921-4ed6-b72f-f842213b0ea2" />
 
