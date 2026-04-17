@@ -12,7 +12,7 @@ string 객체는 동적 메모리 할당되어 문자 데이터를 저장하기 
 ```
 using namespace std;
 ```
-- std 이름공간 생략하고 cin, cout, string 등을 바로 사용
+- std이름공간에 선언된 모든 이름에 std:: 생략
 ```
 int  main(void)
 {
@@ -80,7 +80,7 @@ int  main(void)
 ```
 using namespace std;
 ```
-- std 이름공간 생략하고 cin, cout, string 등을 바로 사용
+- std이름공간에 선언된 모든 이름에 std:: 생략
 
 ```
 int main(void)
@@ -142,7 +142,7 @@ int main(void)
 ```
 using namespace std;
 ```
-- std 이름공간 생략하고 cin, cout 등을 바로 사용
+- std이름공간에 선언된 모든 이름에 std:: 생략
 
 ```
 int main(void)
@@ -243,7 +243,7 @@ int main(void)
 ```
 using namespace std;
 ```
-- std 이름공간 생략하고 cin, cout, string 등을 바로 사용
+- std이름공간에 선언된 모든 이름에 std:: 생략
 
 ```
 int main(void)
@@ -293,6 +293,148 @@ int main(void)
 <img width="846" height="232" alt="image" src="https://github.com/user-attachments/assets/a7dee6c3-4d83-4621-9f72-28a9a1067120" />
 
 ## 연습문제 5번
+```
+#include <iostream>
+#include <string>
+```
+- cin, cout 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream과 string을 포함
+
+```
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```
+class Container {
+```
+- 클래스 Container 선언
+
+```
+private:
+	int* p;
+	int size;
+```
+- 접근 지정자가 private인 정수 배열을 가리키는 포인터 p와 크기 size 멤버변수 선언
+
+```
+public:
+	Container(int size);
+```
+- 배열 크기를 전달받는 생성자 선언
+
+```
+	~Container();
+```
+- 소멸자 선언
+
+```
+	void read();
+	void write();
+	void rotate();
+	double avg();
+```
+- 정수 입력, 출력, 회전, 평균을 구하는 멤버함수 선언
+
+```
+};
+```
+- 클래스 선언부 닫음
+
+```
+Container::Container(int size){
+	this->size = size;
+	p = new int[size];
+}
+```
+- 생성자 정의
+- 전달받은 size를 멤버변수에 저장하고 동적 배열 생성
+
+```
+Container::~Container()
+{
+	delete[] p;
+}
+```
+- 소멸자 구현
+- 동적으로 할당한 배열 메모리 해제
+
+```
+void Container::read() {
+	cout << "정수" << size << "개 입력>>";
+	for (int i = 0; i < size; i++) cin >> p[i];
+}
+```
+- size만큼 정수를 입력받아 배열 p에 저장하는 함수
+
+```
+void Container::write() {
+	for (int i = 0; i < size; i++) cout << p[i] << ' ';
+	cout << "\n";
+}
+```
+- 배열의 모든 요소를 출력하는 함수
+
+```
+void Container::rotate() {
+	int f = p[size-1];
+	for (int i = size-1; i > 0; i--)
+		p[i] = p[i-1];
+	p[0] = f;
+}
+```
+- 배열의 마지막 값을 저장한 뒤
+- 모든 값을 한 칸씩 뒤로 이동시키고 마지막 값을 맨 앞에 배치하는 함수
+
+```
+double Container::avg() {
+	double t = 0;
+	for (int i = 0; i < size; i++) t += p[i];
+	return t / size;
+}
+```
+- 배열 요소의 합을 구한 뒤 size로 나누어 평균을 반환하는 함수
+
+```
+int main(void)
+{
+```
+- 메인함수 시작
+
+```
+	Container c(10);
+```
+- 크기가 10인 Container 객체 생성
+
+```
+	c.read();
+```
+- 사용자로부터 정수 입력받음
+
+```
+	c.write();
+```
+- 현재 배열 상태 출력
+
+```
+	c.rotate();
+```
+- 배열을 한 칸 회전
+
+```
+	c.write();
+```
+- 회전된 배열 출력
+
+```
+	cout << "평균은" << c.avg() << endl;
+```
+- 배열의 평균값 출력
+
+```
+	return 0;
+}
+```
+- 0을 반환하고 함수 종료
 <img width="977" height="312" alt="image" src="https://github.com/user-attachments/assets/ad2de49c-ac49-46f8-9c81-e2ee9fcae07a" />
 
 ## 연습문제 9번
