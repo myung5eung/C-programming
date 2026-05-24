@@ -11,7 +11,13 @@
 => 1
 
 ## 3번 문제
-
+```
+void f(int n[]);
+int main(void){
+  int m[3]={1,2,3};
+  f(m);
+}
+```
 ### 다음에서 f()함수가 호출 될 때 사용되는 인자 전달 방식은 무엇인가?
 => 주소에 의한 호출
 ## 4번 문제
@@ -21,6 +27,27 @@
 2. void f(int *p);와 void f(int& p) => 다르다.
 ## 5번 문제
 ### 다음 프로그램의 실행 결과는 무엇인가?
-1.
-2.
-
+```
+#include <iostream>
+using namespace std;
+void square(int n){ n=n*n; }
+int main()
+{
+  int m=5;
+  square(m);
+  cout<< m;
+}
+```
+- 5
+```
+#include <iostream>
+using namespace std;
+void square(int& n){ n=n*n; }
+int main()
+{
+  int m=5;
+  square(m);
+  cout<< m;
+}
+```
+-  25
