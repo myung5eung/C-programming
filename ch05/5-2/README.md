@@ -7,6 +7,70 @@
 참조에 의한 호출의 장점은 호출 방법은 값에 의한 호출처럼 간단하지만, 실행 결과는 주소에 의한 호출처럼 원본 변수의 값을 변경할 수 있다는 점이다. 객체를 전달할 때도 객체 전체를 복사하지 않고 원본 객체를 참조하므로 메모리를 절약하고 처리 시간을 줄일 수 있다.
 
 # 실습과제 2
+```cpp
+#include <iostream>
+#include <string>
+```
+- 문자열 처리와 입출력을 위해 iostream, string 헤더파일 포함
+
+```cpp
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```cpp
+void add2(int& value);
+```
+- 정수 값을 참조로 받아 2만큼 증가시키는 함수 원형 선언
+
+```cpp
+int main(void)
+{
+```
+- 메인함수 시작
+
+```cpp
+	int number;
+```
+- 입력받을 정수 변수 number 선언
+
+```cpp
+	cout << "정수를입력하세요: ";
+	cin >> number;
+```
+- 사용자에게 정수 입력받음
+
+```cpp
+	add2(number);
+```
+- add2 함수에 number를 전달하여 함수 호출
+
+```cpp
+	cout << "2만큼증가한값:" << number << endl;
+```
+- 2만큼 증가한 값 출력
+
+```cpp
+	return 0;
+}
+```
+- 0을 반환하고 프로그램 종료
+
+```cpp
+void add2(int& value)
+{
+```
+- 정수 값을 참조로 받아 2만큼 증가시키는 add2 함수 시작
+
+```cpp
+	value += 2;
+```
+- value 값을 2만큼 증가시킴
+
+```cpp
+}
+```
+- 함수 종료
 ## 실행결과
 
 # 실습과제 3
