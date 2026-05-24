@@ -161,7 +161,177 @@ string GetLatterString(string* a, string* b)
 ## 실행결과
 
 # 실습과제 4
+```cpp
+#include <iostream>
+#include <string>
+```
+- 문자열 처리와 입출력을 위해 iostream, string 헤더파일 포함
+
+```cpp
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```cpp
+void SwapString(string* a, string* b);
+```
+- 문자열 주소 두 개를 받아 두 문자열의 값을 바꾸는 함수 원형 선언
+
+```cpp
+int  main(void)
+{
+```
+- 메인함수 시작
+
+```cpp
+	string s1("hello");
+	string s2("world");
+```
+- 문자열 s1을 hello로 초기화
+- 문자열 s2를 world로 초기화
+
+```cpp
+	cout << "호출전 s1: " << s1 << " s2: " << s2 << endl;
+```
+- 함수 호출 전 s1과 s2 출력
+
+```cpp
+	SwapString(&s1, &s2); // 함수 호출
+```
+- SwapString 함수에 s1과 s2의 주소를 전달하여 함수 호출
+
+```cpp
+	cout << "호출후 s1: " << s1 << " s2: " << s2 << endl;
+```
+- 함수 호출 후 s1과 s2 출력
+
+```cpp
+	return 0;
+}
+```
+- 0을 반환하고 프로그램 종료
+
+```cpp
+void SwapString(string* a, string* b)
+{
+```
+- 문자열 주소 두 개를 받아 값을 바꾸는 SwapString 함수 시작
+
+```cpp
+	string temp = *a;
+```
+- a가 가리키는 문자열 값을 임시 변수 temp에 저장
+
+```cpp
+	*a = *b;
+```
+- b가 가리키는 문자열 값을 a가 가리키는 문자열에 저장
+
+```cpp
+	*b = temp;
+```
+- temp에 저장해둔 값을 b가 가리키는 문자열에 저장
+
+```cpp
+}
+```
+- 함수 종료
 ## 실행결과
 
 # 실습과제 5
+```cpp
+#include <iostream>
+#include <string>
+```
+- 문자열 처리와 입출력을 위해 iostream, string 헤더파일 포함
+
+```cpp
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```cpp
+string bigname(string names[]);
+```
+- 문자열 배열을 받아 사전에서 가장 뒤에 나오는 문자열을 반환하는 함수 원형 선언
+
+```cpp
+int  main(void)
+{
+```
+- 메인함수 시작
+
+```cpp
+	string names[5];
+```
+- 문자열 5개를 저장할 배열 names 선언
+
+```cpp
+	for (int i = 0; i < 5; i++) {
+```
+- 이름 5개를 입력받기 위한 반복문 실행
+
+```cpp
+		cout << "이름 >> ";
+		getline(cin, names[i], '\n');
+```
+- 사용자에게 이름 입력받고 공백 포함 입력을 위해 getline 사용
+
+```cpp
+	}
+```
+- 반복문 종료
+
+```cpp
+	string res = bigname(names);
+```
+- bigname 함수에 names 배열을 전달하고 반환값을 res에 저장
+
+```cpp
+	cout << "사전에서 가장 뒤에 나오는 문자열은 " << res << endl;
+```
+- 사전에서 가장 뒤에 나오는 문자열 출력
+
+```cpp
+	return 0;
+}
+```
+- 0을 반환하고 프로그램 종료
+
+```cpp
+string bigname(string names[])
+{
+```
+- 문자열 배열에서 사전에서 가장 뒤에 나오는 문자열을 찾는 bigname 함수 시작
+
+```cpp
+	string max = names[0];
+```
+- 첫 번째 문자열을 max에 저장
+
+```cpp
+	for (int i = 1; i < 5; i++)
+	{
+```
+- 두 번째 문자열부터 마지막 문자열까지 비교하기 위한 반복문 실행
+
+```cpp
+		if (max < names[i]) max = names[i];
+```
+- max보다 names[i]가 사전에서 뒤에 있으면 max에 names[i] 저장
+
+```cpp
+	}
+```
+- 반복문 종료
+
+```cpp
+	return max;
+```
+- 사전에서 가장 뒤에 나오는 문자열 max 반환
+
+```cpp
+}
+```
+- 함수 종료
 ## 실행결과
