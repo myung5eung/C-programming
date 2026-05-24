@@ -21,9 +21,143 @@
 이후 함수 호출문은 이 임시변수로 대체되고, 대입 연산이 끝나면 임시변수는 사라진다.
 
 # 실습과제 2
+```cpp
+#include <iostream>
+#include <string>
+```
+- 문자열 처리와 입출력을 위해 iostream, string 헤더파일 포함
+
+```cpp
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```cpp
+string GetLatterString(string a, string b);
+```
+- 문자열 두 개를 받아 사전에서 뒤에 나오는 문자열을 반환하는 함수 원형 선언
+
+```cpp
+int  main(void)
+{
+```
+- 메인함수 시작
+
+```cpp
+	string s1("hello");
+	string s2("world");
+	string res;
+```
+- 문자열 s1을 hello로 초기화
+- 문자열 s2를 world로 초기화
+- 결과를 저장할 문자열 res 선언
+
+```cpp
+	res = GetLatterString(s1, s2);
+```
+- GetLatterString 함수에 s1과 s2를 전달하고 반환값을 res에 저장
+
+```cpp
+	cout << "사전에서 뒤에 나오는 문자열은" << res << "입니다. " << endl;
+```
+- 사전에서 뒤에 나오는 문자열 출력
+
+```cpp
+	return 0;
+}
+```
+- 0을 반환하고 프로그램 종료
+
+```cpp
+string GetLatterString(string a, string b)
+{
+```
+- 문자열 두 개를 비교하는 GetLatterString 함수 시작
+
+```cpp
+	if (a[0] > b[0]) return a;
+```
+- a의 첫 번째 문자가 b의 첫 번째 문자보다 크면 a 반환
+
+```cpp
+	else return b;
+```
+- 그렇지 않으면 b 반환
+
+```cpp
+}
+```
+- 함수 종료
 ## 실행결과
 
 # 실습과제 3
+```cpp
+#include <iostream>
+#include <string>
+```
+- 문자열 처리와 입출력을 위해 iostream, string 헤더파일 포함
+
+```cpp
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```cpp
+string GetLatterString(string* a, string* b);
+```
+- 문자열 주소 두 개를 받아 사전에서 뒤에 나오는 문자열을 반환하는 함수 원형 선언
+
+```cpp
+int  main(void)
+{
+```
+- 메인함수 시작
+
+```cpp
+	string s1("hello");
+	string s2("world");
+	string res;
+```
+- 문자열 s1을 hello로 초기화
+- 문자열 s2를 world로 초기화
+- 결과를 저장할 문자열 res 선언
+
+```cpp
+	res = GetLatterString(&s1, &s2);
+```
+- GetLatterString 함수에 s1과 s2의 주소를 전달하고 반환값을 res에 저장
+
+```cpp
+	cout << "사전에서 뒤에 나오는 문자열은" << res << "입니다. " << endl;
+```
+- 사전에서 뒤에 나오는 문자열 출력
+
+```cpp
+	return 0;
+}
+```
+- 0을 반환하고 프로그램 종료
+
+```cpp
+string GetLatterString(string* a, string* b)
+{
+```
+- 문자열 주소 두 개를 비교하는 GetLatterString 함수 시작
+
+```cpp
+	if (a[0] > b[0]) return *a;
+```
+- a가 가리키는 문자열이 b가 가리키는 문자열보다 사전에서 뒤에 있으면 a가 가리키는 문자열 반환
+
+```cpp
+	else return *b;
+```
+- 그렇지 않으면 b가 가리키는 문자열 반환
+
+```cpp
+}
+```
+- 함수 종료
 ## 실행결과
 
 # 실습과제 4
