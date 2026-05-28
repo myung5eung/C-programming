@@ -186,7 +186,192 @@ int main() {
 
 
 # 실습과제 3
+```cpp
+#include <iostream>
+```
+- 입출력을 위해 iostream 헤더파일 포함
 
+```cpp
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```cpp
+class Complex;
+```
+- Complex 클래스를 미리 선언
+
+```cpp
+class ComplexManager;
+```
+- ComplexManager 클래스를 미리 선언
+
+```cpp
+class Complex
+{
+```
+- Complex 클래스 시작
+
+```cpp
+	int real, img;
+```
+- 실수부를 저장할 변수 real 선언
+- 허수부를 저장할 변수 img 선언
+
+```cpp
+public:
+```
+- 외부에서 접근 가능한 public 영역 시작
+
+```cpp
+	Complex():Complex(0,0){}
+```
+- 기본 생성자를 통해 real과 img를 0으로 초기화
+
+```cpp
+	Complex(int real, int img);
+```
+- real과 img 값을 전달받는 생성자 선언
+
+```cpp
+	void show();
+```
+- 복소수 값을 출력하는 show 함수 선언
+
+```cpp
+	friend ComplexManager; 
+```
+- ComplexManager 클래스를 프렌드 클래스로 선언
+- ComplexManager 클래스가 Complex의 private 멤버인 real, img에 접근할 수 있게 함
+
+```cpp
+};
+```
+- Complex 클래스 종료
+
+```cpp
+Complex::Complex(int real, int img) {
+```
+- Complex 생성자 정의 시작
+
+```cpp
+	this->real = real; this->img = img;
+```
+- 전달받은 real과 img 값을 현재 객체의 멤버 변수에 저장
+
+```cpp
+	cout << "북소수 " << real << "+" << img << "j 생성" << endl;
+```
+- 복소수 생성 문장 출력
+
+```cpp
+}
+```
+- 생성자 종료
+
+```cpp
+void Complex::show() {
+```
+- Complex 클래스의 show 함수 정의 시작
+
+```cpp
+	cout << "두 북소수의 합은" << real << "+" << img << "j" << endl;
+```
+- 복소수의 실수부와 허수부 출력
+
+```cpp
+}
+```
+- show 함수 종료
+
+```cpp
+class ComplexManager
+{
+```
+- ComplexManager 클래스 시작
+
+```cpp
+public:
+```
+- 외부에서 접근 가능한 public 영역 시작
+
+```cpp
+	Complex ComplexAdd(Complex a, Complex b);
+```
+- Complex 객체 두 개를 더하는 ComplexAdd 함수 선언
+
+```cpp
+};
+```
+- ComplexManager 클래스 종료
+
+```cpp
+Complex ComplexManager::ComplexAdd(Complex a, Complex b) {
+```
+- ComplexManager 클래스의 ComplexAdd 함수 정의 시작
+
+```cpp
+	Complex sum;
+```
+- 합계를 저장할 Complex 객체 sum 생성
+
+```cpp
+	sum.real= a.real + b.real;
+```
+- a와 b의 실수부를 더해서 sum의 real에 저장
+
+```cpp
+	sum.img = a.img + b.img;
+```
+- a와 b의 허수부를 더해서 sum의 img에 저장
+
+```cpp
+	return sum;
+```
+- 더한 결과인 sum 반환
+
+```cpp
+}
+```
+- ComplexAdd 함수 종료
+
+```cpp
+int main() {
+```
+- 메인함수 시작
+
+```cpp
+	Complex x(2, 3), y(-5, 10), sum;
+```
+- x 객체는 2+3j로 생성
+- y 객체는 -5+10j로 생성
+- sum 객체는 기본 생성자로 생성
+
+```cpp
+	ComplexManager man;
+```
+- ComplexManager 객체 man 생성
+
+```cpp
+	sum = man.ComplexAdd(x, y);
+```
+- man 객체의 ComplexAdd 함수로 x와 y를 더한 결과를 sum에 저장
+
+```cpp
+	cout << "두 복소수의 합은";
+```
+- 결과 출력 전 안내문 출력
+
+```cpp
+	sum.show();
+```
+- sum 객체의 복소수 값 출력
+
+```cpp
+
+}
+```
+- 메인함수 종료
 ## 실행결과
 <img width="972" height="271" alt="image" src="https://github.com/user-attachments/assets/352e47af-27b4-4448-91fc-2cc20eeac881" />
 
