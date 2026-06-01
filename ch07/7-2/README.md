@@ -139,6 +139,8 @@ int main(void) {
 - 메인함수 종료
 ## 실행결과
 <img width="627" height="215" alt="image" src="https://github.com/user-attachments/assets/5edaf3d3-9160-47a9-adfb-e9f7251f5250" />
+
+
 # 실습과제2
 ```cpp
 #include <iostream>
@@ -281,6 +283,8 @@ int main(void) {
 - 메인함수 종료
 ## 실행결과
 <img width="582" height="291" alt="image" src="https://github.com/user-attachments/assets/ffdeff49-b9ef-42f6-9e8e-39b46bf24790" />
+
+
 # 실습과제3
 ```cpp
 #include <iostream>
@@ -427,6 +431,8 @@ int main(void) {
 - 메인함수 종료
 ## 실행결과
 <img width="572" height="305" alt="image" src="https://github.com/user-attachments/assets/6ac50e62-b980-40ce-b11d-fa8bec0ea675" />
+
+
 # 실습과제 4
 
 ## 실행결과
