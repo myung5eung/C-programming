@@ -13,6 +13,7 @@ complex complex::operator-(int a) {
 	return temp;
 }
 void complex::show() {
+	if(this->y<0) cout << x << y << "j" << endl;
 	cout << x << "+" << y << "j" << endl;
 }
 int main(void) {
