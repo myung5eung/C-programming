@@ -12,6 +12,7 @@ Complex& Complex::operator+=(Complex op2) {
 	return *this;
 }
 void Complex::show() {
+	if(this->y<0) cout << x << y << "j" << endl;
 	cout << x << "+" << y << "j" << endl;
 }
 int main(void) {
