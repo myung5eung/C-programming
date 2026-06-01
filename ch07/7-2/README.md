@@ -175,7 +175,7 @@ public:
 ```cpp
 	Complex operator*(Complex op2);
 ```
-- * 연산자를 중복하는 함수 선언
+- 연산자를 중복하는 함수 선언
 - Complex 객체끼리 곱할 수 있게 함
 
 ```cpp
@@ -221,7 +221,7 @@ Complex Complex::operator*(Complex op2) {
 ```cpp
 }
 ```
-- * 연산자 중복 함수 종료
+- 연산자 중복 함수 종료
 
 ```cpp
 void Complex::show() {
@@ -281,4 +281,153 @@ int main(void) {
 - 메인함수 종료
 ## 실행결과
 <img width="582" height="291" alt="image" src="https://github.com/user-attachments/assets/ffdeff49-b9ef-42f6-9e8e-39b46bf24790" />
+# 실습과제3
+```cpp
+#include <iostream>
+```
+- 입출력을 위해 iostream 헤더파일 포함
+
+```cpp
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```cpp
+class Complex {
+```
+- Complex 클래스 시작
+
+```cpp
+	int x, y;
+```
+- 실수부를 저장할 변수 x 선언
+- 허수부를 저장할 변수 y 선언
+
+```cpp
+public:
+```
+- 외부에서 접근 가능한 public 영역 시작
+
+```cpp
+	Complex(int x = 0, int y = 0);
+```
+- x와 y 값을 전달받는 생성자 선언
+- 값을 안 넣으면 기본값 0으로 설정
+
+```cpp
+	Complex& operator+=(Complex op2);
+```
+- += 연산자를 중복하는 함수 선언
+- Complex 객체끼리 더한 값을 현재 객체에 저장할 수 있게 함
+
+```cpp
+	void show();
+```
+- 복소수 값을 출력하는 show 함수 선언
+
+```cpp
+};
+```
+- Complex 클래스 종료
+
+```cpp
+Complex::Complex(int x, int y) { this->x = x; this->y = y; }
+```
+- 전달받은 x와 y 값을 현재 객체의 멤버 변수에 저장
+
+```cpp
+Complex& Complex::operator+=(Complex op2) {
+```
+- Complex 클래스의 += 연산자 중복 함수 시작
+
+```cpp
+	this->x += op2.x;
+```
+- 현재 객체의 x 값에 op2 객체의 x 값을 더해서 저장
+
+```cpp
+	this->y += op2.y;
+```
+- 현재 객체의 y 값에 op2 객체의 y 값을 더해서 저장
+
+```cpp
+	return *this;
+```
+- 현재 객체 자신을 반환
+
+```cpp
+}
+```
+- += 연산자 중복 함수 종료
+
+```cpp
+void Complex::show() {
+```
+- Complex 클래스의 show 함수 정의 시작
+
+```cpp
+	if(this->y<0) cout << x << y << "j" << endl;
+```
+- y 값이 음수이면 + 없이 복소수 출력
+
+```cpp
+	cout << x << "+" << y << "j" << endl;
+```
+- 복소수의 실수부와 허수부 출력
+
+```cpp
+}
+```
+- show 함수 종료
+
+```cpp
+int main(void) {
+```
+- 메인함수 시작
+
+```cpp
+	Complex a(3, 5), b(1, 1);
+```
+- a 객체는 3+5j로 생성
+- b 객체는 1+1j로 생성
+
+```cpp
+	a.show();
+```
+- a 객체의 복소수 값 출력
+
+```cpp
+	b.show();
+```
+- b 객체의 복소수 값 출력
+
+```cpp
+	b += a;
+```
+- b 객체에 a 객체 값을 더해서 b에 저장
+
+```cpp
+	a.show();
+```
+- a 객체의 복소수 값 출력
+
+```cpp
+	b.show();
+```
+- b 객체의 복소수 값 출력
+
+```cpp
+	return 0;
+```
+- 0을 반환하고 프로그램 종료
+
+```cpp
+}
+```
+- 메인함수 종료
+## 실행결과
+<img width="572" height="305" alt="image" src="https://github.com/user-attachments/assets/6ac50e62-b980-40ce-b11d-fa8bec0ea675" />
+# 실습과제 4
+
+## 실행결과
 
