@@ -129,3 +129,4 @@ int main(void) {
 ```
 - 메인함수 종료
 ## 실행결과
+<img width="627" height="215" alt="image" src="https://github.com/user-attachments/assets/5edaf3d3-9160-47a9-adfb-e9f7251f5250" />
