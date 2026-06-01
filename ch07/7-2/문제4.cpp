@@ -3,6 +3,8 @@
 // 날짜: 26년 6월 01일
 // 작성자: 명승연
 // *******************************************
+#include <iostream>
+using namespace std;
 class complex {
 	int x, y;
 public:
