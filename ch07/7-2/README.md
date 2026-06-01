@@ -434,6 +434,154 @@ int main(void) {
 
 
 # 실습과제 4
+```cpp
+#include <iostream>
+```
+- 입출력을 위해 iostream 헤더파일 포함
 
+```cpp
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```cpp
+class complex {
+```
+- complex 클래스 시작
+
+```cpp
+	int x, y;
+```
+- 실수부를 저장할 변수 x 선언
+- 허수부를 저장할 변수 y 선언
+
+```cpp
+public:
+```
+- 외부에서 접근 가능한 public 영역 시작
+
+```cpp
+	complex(int x = 0, int y = 0);
+```
+- x와 y 값을 전달받는 생성자 선언
+- 값을 안 넣으면 기본값 0으로 설정
+
+```cpp
+	complex operator-(int a);
+```
+- - 연산자를 중복하는 함수 선언
+- complex 객체에서 정수를 뺄 수 있게 함
+
+```cpp
+	void show();
+```
+- 복소수 값을 출력하는 show 함수 선언
+
+```cpp
+};
+```
+- complex 클래스 종료
+
+```cpp
+complex::complex(int x, int y) { this->x = x; this->y = y; }
+```
+- 전달받은 x와 y 값을 현재 객체의 멤버 변수에 저장
+
+```cpp
+complex complex::operator-(int a) {
+```
+- complex 클래스의 - 연산자 중복 함수 시작
+
+```cpp
+	complex temp;
+```
+- 뺀 결과를 저장할 complex 객체 temp 생성
+
+```cpp
+	temp.x = this->x-a;
+```
+- 현재 객체의 x 값에서 정수 a를 빼서 temp.x에 저장
+
+```cpp
+	temp.y= this->y-a;
+```
+- 현재 객체의 y 값에서 정수 a를 빼서 temp.y에 저장
+
+```cpp
+	return temp;
+```
+- 뺀 결과인 temp 반환
+
+```cpp
+}
+```
+- - 연산자 중복 함수 종료
+
+```cpp
+void complex::show() {
+```
+- complex 클래스의 show 함수 정의 시작
+
+```cpp
+	if(this->y<0) cout << x << y << "j" << endl;
+```
+- y 값이 음수이면 + 없이 복소수 출력
+
+```cpp
+	cout << x << "+" << y << "j" << endl;
+```
+- 복소수의 실수부와 허수부 출력
+
+```cpp
+}
+```
+- show 함수 종료
+
+```cpp
+int main(void) {
+```
+- 메인함수 시작
+
+```cpp
+	complex a(3, 5), b;
+```
+- a 객체는 3+5j로 생성
+- b 객체는 기본값 0+0j로 생성
+
+```cpp
+	a.show();
+```
+- a 객체의 복소수 값 출력
+
+```cpp
+	b.show();
+```
+- b 객체의 복소수 값 출력
+
+```cpp
+	b = a - 2; // 복소수 객체와 정수 빼기
+```
+- a 객체에서 정수 2를 뺀 결과를 b에 저장
+
+```cpp
+	a.show();
+```
+- a 객체의 복소수 값 출력
+
+```cpp
+	b.show();
+```
+- b 객체의 복소수 값 출력
+
+```cpp
+	return 0;
+```
+- 0을 반환하고 프로그램 종료
+
+```cpp
+}
+```
+- 메인함수 종료
 ## 실행결과
+<img width="565" height="306" alt="image" src="https://github.com/user-attachments/assets/050e000e-6d96-4d8b-b5a6-02f46e08d1e2" />
 
