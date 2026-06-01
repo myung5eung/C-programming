@@ -1,5 +1,14 @@
 # 실습과제 1
 ```cpp
+#include <iostream>
+```
+- 입출력을 위해 iostream 헤더파일 포함
+
+```cpp
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+```cpp
 class Complex {
 ```
 - Complex 클래스 시작
