@@ -555,5 +555,222 @@ int main() {
 ## 실행결과
 
 # 실습과제 4
+```cpp
+#include <iostream>
+```
+- 입출력을 위해 iostream 헤더파일 포함
+
+```cpp
+using namespace std;
+```
+- std이름공간에 선언된 모든 이름에 std:: 생략
+
+```cpp
+class Power {
+```
+- Power 클래스 시작
+
+```cpp
+	int kick;
+```
+- kick 값을 저장할 정수 변수 kick 선언
+
+```cpp
+	int punch;
+```
+- punch 값을 저장할 정수 변수 punch 선언
+
+```cpp
+public:
+```
+- 외부에서 접근 가능한 public 영역 시작
+
+```cpp
+	Power(int kick = 0, int punch = 0) {
+```
+- kick과 punch 값을 전달받는 생성자 시작
+- 값을 안 넣으면 기본값 0으로 설정
+
+```cpp
+		this->kick = kick; this->punch = punch;
+```
+- 전달받은 kick과 punch 값을 현재 객체의 멤버 변수에 저장
+
+```cpp
+	}
+```
+- 생성자 종료
+
+```cpp
+	void show();
+```
+- Power 객체의 kick과 punch 값을 출력하는 show 함수 선언
+
+```cpp
+	Power operator*(int op2);
+```
+- * 연산자를 중복하는 함수 선언
+- Power 객체에 정수를 곱할 수 있게 함
+
+```cpp
+	Power operator+(Power op2);
+```
+- + 연산자를 중복하는 함수 선언
+- Power 객체끼리 더할 수 있게 함
+
+```cpp
+	friend Power operator*(int op1, Power op2); 
+```
+- * 연산자를 프렌드 함수로 선언
+- 정수와 Power 객체를 곱할 수 있게 함
+- 외부 함수가 Power의 private 멤버인 kick, punch에 접근할 수 있게 함
+
+```cpp
+};
+```
+- Power 클래스 종료
+
+```cpp
+void Power::show() {
+```
+- Power 클래스의 show 함수 정의 시작
+
+```cpp
+	cout << "kick=" << kick << ',' << "punch=" << punch << endl;
+```
+- kick과 punch 값을 출력
+
+```cpp
+}
+```
+- show 함수 종료
+
+```cpp
+Power Power:: operator*(int op2) {
+```
+- Power 클래스의 * 연산자 중복 함수 시작
+
+```cpp
+	Power tmp;
+```
+- 곱한 결과를 저장할 Power 객체 tmp 생성
+
+```cpp
+	tmp.kick = this->kick * op2;
+```
+- 현재 객체의 kick 값에 op2를 곱해서 tmp.kick에 저장
+
+```cpp
+	tmp.punch = this->punch * op2;
+```
+- 현재 객체의 punch 값에 op2를 곱해서 tmp.punch에 저장
+
+```cpp
+	return tmp;
+```
+- 곱한 결과인 tmp 반환
+
+```cpp
+}
+```
+- * 연산자 중복 함수 종료
+
+```cpp
+Power Power::operator+(Power op2) {
+```
+- Power 클래스의 + 연산자 중복 함수 시작
+
+```cpp
+	Power c;
+```
+- 더한 결과를 저장할 Power 객체 c 생성
+
+```cpp
+	c.kick = this->kick + op2.kick;
+```
+- 현재 객체의 kick 값과 op2의 kick 값을 더해서 c.kick에 저장
+
+```cpp
+	c.punch = this->punch + op2.punch;
+```
+- 현재 객체의 punch 값과 op2의 punch 값을 더해서 c.punch에 저장
+
+```cpp
+	return c;
+```
+- 더한 결과인 c 반환
+
+```cpp
+}
+```
+- + 연산자 중복 함수 종료
+
+```cpp
+Power operator*(int op1, Power op2) {
+```
+- 정수와 Power 객체를 곱하는 * 연산자 함수 시작
+
+```cpp
+	Power tmp; 
+```
+- 곱한 결과를 저장할 Power 객체 tmp 생성
+
+```cpp
+	tmp.kick = op1 * op2.kick;
+```
+- op1과 op2의 kick 값을 곱해서 tmp.kick에 저장
+
+```cpp
+	tmp.punch = op1 * op2.punch;
+```
+- op1과 op2의 punch 값을 곱해서 tmp.punch에 저장
+
+```cpp
+	return tmp;
+```
+- 곱한 결과인 tmp 반환
+
+```cpp
+}
+```
+- * 연산자 함수 종료
+
+```cpp
+
+int main() {
+```
+- 메인함수 시작
+
+```cpp
+	Power a(1, 1), b(2, 2), c;
+```
+- a 객체는 kick 1, punch 1로 생성
+- b 객체는 kick 2, punch 2로 생성
+- c 객체는 기본값 0, 0으로 생성
+
+```cpp
+	c.show();
+```
+- c 객체의 kick과 punch 값 출력
+
+```cpp
+	c = a * 2 + 2 * b;
+```
+- a 객체에 2를 곱한 값과 2에 b 객체를 곱한 값을 더해서 c에 저장
+
+```cpp
+	c.show();
+```
+- 계산 후 c 객체의 kick과 punch 값 출력
+
+```cpp
+	return 0;
+```
+- 0을 반환하고 프로그램 종료
+
+```cpp
+}
+```
+- 메인함수 종료
 
 ## 실행결과
